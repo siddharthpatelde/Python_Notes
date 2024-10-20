@@ -26,5 +26,6 @@ print(set2)
 set2.discard(50)
 print(set2)
 
-
-
+#add method to add item
+set2.add(50)
+print(set2)
