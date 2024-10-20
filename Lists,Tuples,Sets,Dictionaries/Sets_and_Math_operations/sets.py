@@ -29,3 +29,25 @@ print(set2)
 #add method to add item
 set2.add(50)
 print(set2)
+
+#########################################################################
+
+#union
+
+set_1 = {2,3,3,4,5}
+set_2 = {2,4,9,7}
+
+print(set_1.union(set_2))
+print(set_1 | set_2)
+
+#intersection
+print(set_1.intersection(set_2))
+print(set_1 & set_2)
+
+#diffrence
+print(set_1.difference(set_2))
+print(set_1 - set_2)
+
+#symetricdiffrence
+print(set_1.symmetric_difference(set_2))
+print(set_1 ^ set_2)
