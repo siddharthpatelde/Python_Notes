@@ -1,4 +1,5 @@
 #let say we are making website like amazon and it has sevral key datas  like following
+from os import system
 
 #Online order
 
