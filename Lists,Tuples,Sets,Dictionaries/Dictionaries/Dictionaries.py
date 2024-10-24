@@ -57,7 +57,6 @@ print(dir(order2))
 #                            'popitem', 'setdefault', 'update', 'values']
 
 #to see how any method works use help() function
-
 #help(order2.get)
 
 check_age = order2.get("age", "age was not specified")
