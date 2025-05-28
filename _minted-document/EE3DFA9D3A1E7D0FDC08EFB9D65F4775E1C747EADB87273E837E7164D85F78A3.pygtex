@@ -1,0 +1,80 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} STRINGS – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Explanation:}
+\PYG{c+c1}{\PYGZsh{} A string is a sequence of characters enclosed in single (\PYGZsq{} \PYGZsq{}) or double (\PYGZdq{} \PYGZdq{}) quotes.}
+\PYG{c+c1}{\PYGZsh{} Strings are immutable in Python.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 1. Creating Strings}
+\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}math\PYGZsq{}}     \PYG{c+c1}{\PYGZsh{} single\PYGZhy{}quoted string}
+\PYG{n}{subject} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}math\PYGZdq{}}  \PYG{c+c1}{\PYGZsh{} double\PYGZhy{}quoted string}
+
+\PYG{c+c1}{\PYGZsh{} 2. String Addition and Printing}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}math\PYGZdq{}} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}works\PYGZdq{}}\PYG{p}{)}     \PYG{c+c1}{\PYGZsh{} mathworks}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}math\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}works\PYGZdq{}}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} math works}
+
+\PYG{c+c1}{\PYGZsh{} 3. String Multiplication}
+\PYG{n}{string1} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}
+\PYG{n}{string2} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}world\PYGZdq{}}
+\PYG{n}{number} \PYG{o}{=} \PYG{l+m+mi}{5}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{string1}\PYG{p}{,} \PYG{n}{string2}\PYG{p}{)}     \PYG{c+c1}{\PYGZsh{} hello world}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{string1} \PYG{o}{+} \PYG{n}{string2}\PYG{p}{)}    \PYG{c+c1}{\PYGZsh{} helloworld}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{string1} \PYG{o}{*} \PYG{n}{number}\PYG{p}{)}     \PYG{c+c1}{\PYGZsh{} hellohellohellohellohello}
+
+\PYG{c+c1}{\PYGZsh{} 4. Invalid Concatenation Example}
+\PYG{c+c1}{\PYGZsh{} print(string1 + number)   \PYGZsh{} TypeError: can only concatenate str (not \PYGZdq{}int\PYGZdq{})}
+
+
+
+
+\PYG{c+c1}{\PYGZsh{} STRING METHODS – TOP 10 DEFINITIONS}
+
+\PYG{n}{text} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}hello WORLD\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} 5. capitalize()}
+\PYG{c+c1}{\PYGZsh{} Returns string with first character uppercased, rest lowercased.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{capitalize}\PYG{p}{())}  \PYG{c+c1}{\PYGZsh{} Hello world}
+
+\PYG{c+c1}{\PYGZsh{} 6. lower()}
+\PYG{c+c1}{\PYGZsh{} Converts all characters to lowercase.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{())}       \PYG{c+c1}{\PYGZsh{} hello world}
+
+\PYG{c+c1}{\PYGZsh{} 7. title()}
+\PYG{c+c1}{\PYGZsh{} Capitalizes first letter of each word.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{title}\PYG{p}{())}       \PYG{c+c1}{\PYGZsh{} Hello World}
+
+\PYG{c+c1}{\PYGZsh{} 8. casefold()}
+\PYG{c+c1}{\PYGZsh{} Aggressive lowercase, suitable for comparisons.}
+\PYG{n}{text2} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Straße\PYGZdq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text2}\PYG{o}{.}\PYG{n}{casefold}\PYG{p}{())}   \PYG{c+c1}{\PYGZsh{} strasse}
+
+\PYG{c+c1}{\PYGZsh{} 9. upper()}
+\PYG{c+c1}{\PYGZsh{} Converts all characters to uppercase.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{())}       \PYG{c+c1}{\PYGZsh{} HELLO WORLD}
+
+\PYG{c+c1}{\PYGZsh{} 10. count()}
+\PYG{c+c1}{\PYGZsh{} Counts how many times a substring appears.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}l\PYGZdq{}}\PYG{p}{))}            \PYG{c+c1}{\PYGZsh{} 3}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}l\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))}      \PYG{c+c1}{\PYGZsh{} 1}
+
+\PYG{c+c1}{\PYGZsh{} 11. find()}
+\PYG{c+c1}{\PYGZsh{} Finds index of substring, or \PYGZhy{}1 if not found.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}WORLD\PYGZdq{}}\PYG{p}{))}        \PYG{c+c1}{\PYGZsh{} 6}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}not\PYGZus{}here\PYGZdq{}}\PYG{p}{))}     \PYG{c+c1}{\PYGZsh{} \PYGZhy{}1}
+
+\PYG{c+c1}{\PYGZsh{} 12. replace()}
+\PYG{c+c1}{\PYGZsh{} Replaces substring with another.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}WORLD\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Python\PYGZdq{}}\PYG{p}{))}     \PYG{c+c1}{\PYGZsh{} hello Python}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}l\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}X\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{))}           \PYG{c+c1}{\PYGZsh{} heXXo WORLD}
+
+\PYG{c+c1}{\PYGZsh{} 13. swapcase()}
+\PYG{c+c1}{\PYGZsh{} Swaps uppercase to lowercase and vice versa.}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello World\PYGZdq{}}\PYG{o}{.}\PYG{n}{swapcase}\PYG{p}{())}  \PYG{c+c1}{\PYGZsh{} hELLO wORLD}
+
+\PYG{c+c1}{\PYGZsh{} 14. join()}
+\PYG{c+c1}{\PYGZsh{} Joins elements of iterable with separator.}
+\PYG{n}{words} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}world\PYGZdq{}}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{words}\PYG{p}{))}           \PYG{c+c1}{\PYGZsh{} hello\PYGZhy{}world}
+\end{Verbatim}

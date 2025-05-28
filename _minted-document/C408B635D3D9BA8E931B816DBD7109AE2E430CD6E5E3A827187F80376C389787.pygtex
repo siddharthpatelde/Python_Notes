@@ -1,0 +1,54 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} MATH OPERATORS – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Syntax:}
+\PYG{c+c1}{\PYGZsh{} \PYGZlt{}operand1\PYGZgt{} \PYGZlt{}operator\PYGZgt{} \PYGZlt{}operand2\PYGZgt{}}
+
+\PYG{c+c1}{\PYGZsh{} Operators:}
+\PYG{c+c1}{\PYGZsh{} +   Addition            →  a + b}
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}   Subtraction         →  a \PYGZhy{} b}
+\PYG{c+c1}{\PYGZsh{} *   Multiplication      →  a * b}
+\PYG{c+c1}{\PYGZsh{} /   Division            →  a / b}
+\PYG{c+c1}{\PYGZsh{} //  Floor Division      →  a // b}
+\PYG{c+c1}{\PYGZsh{} \PYGZpc{}   Modulus (Remainder) →  a \PYGZpc{} b}
+\PYG{c+c1}{\PYGZsh{} **  Exponentiation      →  a ** b}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZsh{} 1. Addition}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}1 + 1 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. Subtraction}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}2 \PYGZhy{} 3 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{3}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. Multiplication}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}4 * 5 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{4} \PYG{o}{*} \PYG{l+m+mi}{5}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. Division (always returns float)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}6 / 3 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{6} \PYG{o}{/} \PYG{l+m+mi}{3}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. Floor Division (truncates decimals)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}7 // 2 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{7} \PYG{o}{//} \PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. Rounded division result using round()}
+\PYG{n}{number1} \PYG{o}{=} \PYG{l+m+mf}{1.85}
+\PYG{n}{number2} \PYG{o}{=} \PYG{l+m+mf}{1.35}
+\PYG{n}{number3} \PYG{o}{=} \PYG{l+m+mf}{1.5}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{number1}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ rounded is:\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{round}\PYG{p}{(}\PYG{n}{number1}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 2}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{number2}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ rounded is:\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{round}\PYG{p}{(}\PYG{n}{number2}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 1}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{number3}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ rounded is:\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{round}\PYG{p}{(}\PYG{n}{number3}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 2}
+
+\PYG{c+c1}{\PYGZsh{} 7. Exponentiation}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}3 ** 3 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3} \PYG{o}{**} \PYG{l+m+mi}{3}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} 27}
+
+\PYG{c+c1}{\PYGZsh{} 8. Modulus (Remainder)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}20 / 6 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{20} \PYG{o}{/} \PYG{l+m+mi}{6}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} Division}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}20 \PYGZpc{} 6 =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{20} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{6}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} Remainder (2)}
+
+\PYG{c+c1}{\PYGZsh{} 9. Operator Precedence in Python:}
+\PYG{c+c1}{\PYGZsh{} 1. ()}
+\PYG{c+c1}{\PYGZsh{} 2. **}
+\PYG{c+c1}{\PYGZsh{} 3. * and /}
+\PYG{c+c1}{\PYGZsh{} 4. + and \PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Evaluated left to right within same level}
+\end{Verbatim}

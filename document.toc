@@ -1,0 +1,4 @@
+\contentsline {section}{\numberline {1}Lesson 1: Print Function – Full Usage Guide}{3}{section.1}%
+\contentsline {section}{\numberline {2}Lesson 2: Input Function – Full Usage Guide}{4}{section.2}%
+\contentsline {section}{\numberline {3}Lesson 3: Math Operators – Full Usage Guide}{5}{section.3}%
+\contentsline {section}{\numberline {4}Lesson 4: Strings – Full Usage Guide}{6}{section.4}%

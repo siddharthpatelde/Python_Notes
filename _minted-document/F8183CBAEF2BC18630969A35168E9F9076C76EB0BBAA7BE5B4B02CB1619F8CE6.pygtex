@@ -1,0 +1,60 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} INPUT FUNCTION – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Syntax:}
+\PYG{c+c1}{\PYGZsh{} input(prompt=\PYGZsq{}\PYGZsq{})}
+
+\PYG{c+c1}{\PYGZsh{} Parameters:}
+\PYG{c+c1}{\PYGZsh{} prompt → A string, written to standard output without a trailing newline,}
+\PYG{c+c1}{\PYGZsh{}           to ask the user for input. Default is an empty string \PYGZsq{}\PYGZsq{}.}
+\PYG{c+c1}{\PYGZsh{} Returns → A string entered by the user (always str type).}
+\PYG{c+c1}{\PYGZsh{} Notes   → Always returns a string. You need to convert it using int(), float(), etc. if needed.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZsh{} 1. Basic usage with no prompt}
+\PYG{n}{user\PYGZus{}input} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You entered:\PYGZdq{}}\PYG{p}{,} \PYG{n}{user\PYGZus{}input}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. Input with a prompt}
+\PYG{n}{name} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your name: \PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello,\PYGZdq{}}\PYG{p}{,} \PYG{n}{name}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. Converting input to integer}
+\PYG{n}{age} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your age: \PYGZdq{}}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You will be\PYGZdq{}}\PYG{p}{,} \PYG{n}{age} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}next year.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. Converting input to float}
+\PYG{n}{height} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your height in meters: \PYGZdq{}}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Your height in cm is\PYGZdq{}}\PYG{p}{,} \PYG{n}{height} \PYG{o}{*} \PYG{l+m+mi}{100}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. Reading multiple values (as strings)}
+\PYG{n}{x}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter two words separated by space: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Word 1:\PYGZdq{}}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Word 2:\PYGZdq{}}\PYG{p}{,} \PYG{n}{y}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. Reading and converting multiple values to int}
+\PYG{n}{a}\PYG{p}{,} \PYG{n}{b} \PYG{o}{=} \PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter two integers: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{split}\PYG{p}{())}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Sum =\PYGZdq{}}\PYG{p}{,} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 7. Reading many values into a list of ints}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter multiple numbers: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You entered:\PYGZdq{}}\PYG{p}{,} \PYG{n}{numbers}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 8. Handling invalid input using try/except}
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{salary} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your monthly salary: \PYGZdq{}}\PYG{p}{))}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Yearly salary:\PYGZdq{}}\PYG{p}{,} \PYG{n}{salary} \PYG{o}{*} \PYG{l+m+mi}{12}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ValueError}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Invalid input! Please enter a number.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 9. Reading input and using string formatting}
+\PYG{n}{city} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your city: \PYGZdq{}}\PYG{p}{)}
+\PYG{n}{country} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your country: \PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}You live in }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{city}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{country}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 10. Secure password input (hidden, only in terminal)}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{getpass}
+\PYG{n}{password} \PYG{o}{=} \PYG{n}{getpass}\PYG{o}{.}\PYG{n}{getpass}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter your password: \PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Password received successfully.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

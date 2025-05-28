@@ -1,0 +1,200 @@
+\documentclass[a4paper,11pt]{article}
+
+% ───────────────────────────
+%         PACKAGES
+% ───────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\usepackage{minted}
+\usepackage{inconsolata}  % clean monospaced font
+\usepackage{mathpazo}     % professional text font
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+
+
+% ───────────────────────────
+%         GEOMETRY
+% ───────────────────────────
+\geometry{
+	a4paper,
+	left=2.5cm,
+	right=2.5cm,
+	top=2.5cm,
+	bottom=2.5cm
+}
+
+% ───────────────────────────
+%         HEADER/FOOTER
+% ───────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lhead{\textsf{\textcolor{gray}{Python Notes}}}
+\rhead{\textsf{\textcolor{gray}{Siddharth Patel}}}
+\rfoot{\textsf{\textcolor{gray}{\thepage}}}
+
+% ───────────────────────────
+%         TITLE FORMAT
+% ───────────────────────────
+\titleformat{\section}
+{\Large\bfseries\sffamily\color{black}}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\large\bfseries\sffamily\color{black}}
+{\thesubsection}{1em}{}
+
+% ───────────────────────────
+%         MINTED SETTINGS
+% ───────────────────────────
+\definecolor{mintbg}{rgb}{0.97,0.97,0.97}
+\setminted{
+	bgcolor=mintbg,
+	fontsize=\footnotesize,
+	linenos=true,
+	numbersep=5pt,
+	frame=lines,
+	framesep=2mm,
+	breaklines=true,
+	tabsize=4,
+	encoding=utf8
+}
+
+
+
+% ───────────────────────────
+%         TITLE PAGE
+% ───────────────────────────
+\title{\Huge \textbf{My Python Course Notes}\\[1ex]
+	\Large Structured Revision for Every Lesson}
+\author{\textbf{Siddharth Patel} \\ HTW Berlin}
+\date{\today}
+
+% ───────────────────────────
+%         BEGIN DOCUMENT
+% ───────────────────────────
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	% ───────────────────────────
+	%         FIRST LESSON
+	% ───────────────────────────
+	\section{Lesson 1: Print Function – Full Usage Guide}
+	\inputminted{python}{Python_Files/print_guid.py}
+	
+	\vspace{1em}
+	\subsection*{Additional Functions Used in This Lesson}
+	
+\vspace{1em}
+\subsection*{Referenced Functions – Syntax and Output Type}
+
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{4cm} p{7.5cm} p{3cm}}
+	\toprule
+	Function & Syntax & Return / Output Type \\
+	\midrule
+	
+	\texttt{with open()} & \texttt{with open("file.txt", "w") as f:} & File object \\
+	\texttt{print(..., file=f)} & \texttt{print("text", file=f)} & Writes to file, returns \texttt{None} \\
+	
+	\texttt{range()} & \texttt{range(3)} or \texttt{range(start, stop, step)} & Range object (iterable) \\
+	
+	\texttt{time.sleep()} & \texttt{time.sleep(seconds)} & None (pauses execution) \\
+	
+	\bottomrule
+\end{tabular}
+
+	
+	
+	\section{Lesson 2: Input Function – Full Usage Guide}
+	\inputminted{python}{Python_Files/input_guid.py}
+	
+	
+	\vspace{1em}
+	\subsection*{Referenced Functions – Syntax and Output Type}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.5cm} p{8cm} p{3cm}}
+		\toprule
+		Function / Statement & Syntax & Return / Output Type \\
+		\midrule
+		
+		\texttt{.split()} & \texttt{string.split()} or \texttt{string.split("delimiter")} & List of strings \\
+		
+		\texttt{map()} & \texttt{map(function, iterable)} & Map object (can be converted to list) \\
+		
+		\texttt{list()} & \texttt{list(iterable)} & List object \\
+		
+		\texttt{try / except} & 
+		\texttt{try:\newline \hspace{1em} code\newline except ErrorType:\newline \hspace{1em} fallback} & Flow control – no return value; handles runtime errors \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	
+	
+	
+	\section{Lesson 3: Math Operators – Full Usage Guide}
+	\inputminted{python}{Python_Files/math_operators_guid.py}
+	
+	\section{Lesson 4: Strings – Full Usage Guide}
+	\inputminted{python}{Python_Files/string_guid.py}
+	
+	\vspace{1em}
+	\subsection*{Referenced Methods – Syntax and Output Type}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.5cm} p{8cm} p{3cm}}
+		\toprule
+		Method / Function & Syntax & Return / Output Type \\
+		\midrule
+		
+		\texttt{.capitalize()} & \texttt{str.capitalize()} & \texttt{str} \\
+		
+		\texttt{.lower()} & \texttt{str.lower()} & \texttt{str} \\
+		
+		\texttt{.title()} & \texttt{str.title()} & \texttt{str} \\
+		
+		\texttt{.casefold()} & \texttt{str.casefold()} & \texttt{str} \\
+		
+		\texttt{.upper()} & \texttt{str.upper()} & \texttt{str} \\
+		
+		\texttt{.count()} & \texttt{str.count(substring, start, end)} & \texttt{int} \\
+		
+		\texttt{.find()} & \texttt{str.find(substring, start, end)} & \texttt{int} \\
+		
+		\texttt{.replace()} & \texttt{str.replace(old, new, count)} & \texttt{str} \\
+		
+		\texttt{.swapcase()} & \texttt{str.swapcase()} & \texttt{str} \\
+		
+		\texttt{.join()} & \texttt{"separator".join(iterable)} & \texttt{str} \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	
+	
+	
+	
+\end{document}

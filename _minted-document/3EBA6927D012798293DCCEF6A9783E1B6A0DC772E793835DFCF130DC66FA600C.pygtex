@@ -1,0 +1,58 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} PRINT FUNCTION – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Syntax:}
+\PYG{c+c1}{\PYGZsh{} print(*objects, sep=\PYGZsq{} \PYGZsq{}, end=\PYGZsq{}\PYGZbs{}n\PYGZsq{}, file=sys.stdout, flush=False)}
+
+\PYG{c+c1}{\PYGZsh{} Parameters:}
+\PYG{c+c1}{\PYGZsh{} *objects → One or more objects to be printed (comma\PYGZhy{}separated).}
+\PYG{c+c1}{\PYGZsh{} sep      → String inserted between objects. Default is \PYGZsq{} \PYGZsq{} (space).}
+\PYG{c+c1}{\PYGZsh{} end      → String appended after the last object. Default is \PYGZsq{}\PYGZbs{}n\PYGZsq{} (new line).}
+\PYG{c+c1}{\PYGZsh{} file     → A file\PYGZhy{}like object (stream); default is sys.stdout.}
+\PYG{c+c1}{\PYGZsh{} flush    → If True, forcibly flush the stream. Default is False.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZsh{} 1. Basic print}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello, World!\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Hello, World!}
+
+\PYG{c+c1}{\PYGZsh{} 2. Printing multiple objects}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Python\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Hello Python 3}
+
+\PYG{c+c1}{\PYGZsh{} 3. Using \PYGZsq{}sep\PYGZsq{} to change separator}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}2025\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}05\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}27\PYGZdq{}}\PYG{p}{,} \PYG{n}{sep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZhy{}\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} 2025\PYGZhy{}05\PYGZhy{}27}
+
+\PYG{c+c1}{\PYGZsh{} 4. Using \PYGZsq{}end\PYGZsq{} to avoid new line}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Loading\PYGZdq{}}\PYG{p}{,} \PYG{n}{end}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}...\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Loading...}
+
+\PYG{c+c1}{\PYGZsh{} 5. Using custom separator and end together}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Name\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Age\PYGZdq{}}\PYG{p}{,} \PYG{n}{sep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}: \PYGZdq{}}\PYG{p}{,} \PYG{n}{end}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{} years}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Name: Age years}
+
+\PYG{c+c1}{\PYGZsh{} 6. Printing to a file}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}output.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Saving this line to a file.\PYGZdq{}}\PYG{p}{,} \PYG{n}{file}\PYG{o}{=}\PYG{n}{f}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 7. Forcing flush (useful in loops/real\PYGZhy{}time output)}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{time}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{end}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{p}{,} \PYG{n}{flush}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Output appears immediately}
+
+\PYG{c+c1}{\PYGZsh{} 8. Printing escape characters}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Line1}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{Line2\PYGZdq{}}\PYG{p}{)}         \PYG{c+c1}{\PYGZsh{} New line}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Tabbed}\PYG{l+s+se}{\PYGZbs{}t}\PYG{l+s+s2}{Space\PYGZdq{}}\PYG{p}{)}        \PYG{c+c1}{\PYGZsh{} Tab space}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}He said }\PYG{l+s+se}{\PYGZbs{}\PYGZdq{}}\PYG{l+s+s2}{hello}\PYG{l+s+se}{\PYGZbs{}\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}    \PYG{c+c1}{\PYGZsh{} Quotes inside string}
+
+\PYG{c+c1}{\PYGZsh{} 9. Printing with formatted strings (f\PYGZhy{}strings)}
+\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Siddhart\PYGZdq{}}
+\PYG{n}{age} \PYG{o}{=} \PYG{l+m+mi}{21}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Hello, my name is }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{name}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ and I am }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{age}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ years old.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 10. Using print with unpacking}
+\PYG{n}{nums} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{o}{*}\PYG{n}{nums}\PYG{p}{)}                \PYG{c+c1}{\PYGZsh{} 1 2 3 4}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{o}{*}\PYG{n}{nums}\PYG{p}{,} \PYG{n}{sep}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}, \PYGZdq{}}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} 1, 2, 3, 4}
+
+\PYG{c+c1}{\PYGZsh{} 11. Printing Unicode/emojis (note: removed for LaTeX safety)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Python is fun\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
