@@ -21,9 +21,34 @@ This repository contains my personal notes on Python, organized and written in L
 - Covers fundamental and intermediate Python topics
 - Easy to expand as new topics are added
 
-## 🚀 Getting Started
+## 🛠️ Setup Instructions (for Minted Support)
 
-No installation or setup required. Just open the LaTeX file (`.tex`) in any LaTeX editor (like Overleaf, TeXstudio, or VSCode with LaTeX Workshop) and compile to PDF.
+This project uses the `minted` package for syntax-highlighted code blocks in LaTeX. Follow these steps to compile successfully:
+
+### 1. Install Python Pygments Package
+
+Make sure you have Python installed, then run:
+
+```bash
+pip install Pygments
+````
+
+### 2. Compile with `--shell-escape`
+
+The LaTeX file must be compiled with the `--shell-escape` flag enabled. Example:
+
+```bash
+pdflatex -synctex=1 -interaction=nonstopmode --shell-escape your_file.tex
+```
+
+If using **TeXstudio**, use this custom command:
+
+```bash
+pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex | txs:///view-pdf
+```
+
+> ⚠️ Without `--shell-escape`, the `minted` code blocks will not render correctly.
+
 
 ## 📜 License
 
