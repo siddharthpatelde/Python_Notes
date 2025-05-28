@@ -71,7 +71,7 @@ if not is_logged_in:
     print("User not logged in")
 
 # 8. Short form if-else (Ternary Expression)
-# ➤ Python provides a one-line shorthand for simple if-else statements.
+# → Python provides a one-line shorthand for simple if-else statements.
 # → Syntax: value_if_true if condition else value_if_false
 # → Returns: One of two values based on the boolean result of the condition.
 

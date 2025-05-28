@@ -1,0 +1,93 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} IF / ELSE / ELIF – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Syntax:}
+\PYG{c+c1}{\PYGZsh{} if condition:}
+\PYG{c+c1}{\PYGZsh{}     block of code}
+\PYG{c+c1}{\PYGZsh{} elif another\PYGZus{}condition:}
+\PYG{c+c1}{\PYGZsh{}     another block}
+\PYG{c+c1}{\PYGZsh{} else:}
+\PYG{c+c1}{\PYGZsh{}     fallback block}
+
+\PYG{c+c1}{\PYGZsh{} Conditional Operators:}
+\PYG{c+c1}{\PYGZsh{} ==   → Equal to                  → (x == y)}
+\PYG{c+c1}{\PYGZsh{} !=   → Not equal to              → (x != y)}
+\PYG{c+c1}{\PYGZsh{} \PYGZlt{}    → Less than                 → (x \PYGZlt{} y)}
+\PYG{c+c1}{\PYGZsh{} \PYGZlt{}=   → Less than or equal to     → (x \PYGZlt{}= y)}
+\PYG{c+c1}{\PYGZsh{} \PYGZgt{}    → Greater than              → (x \PYGZgt{} y)}
+\PYG{c+c1}{\PYGZsh{} \PYGZgt{}=   → Greater than or equal to  → (x \PYGZgt{}= y)}
+
+\PYG{c+c1}{\PYGZsh{} Logical Operators:}
+\PYG{c+c1}{\PYGZsh{} and  → True if both are True     → (x \PYGZgt{} 5 and x \PYGZlt{} 10)}
+\PYG{c+c1}{\PYGZsh{} or   → True if at least one is True → (x \PYGZgt{} 5 or x \PYGZlt{} 3)}
+\PYG{c+c1}{\PYGZsh{} not  → Inverts the truth value   → not (x \PYGZgt{} 5)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZsh{} 1. Simple if statement}
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x is greater than 5\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. if\PYGZhy{}else statement}
+\PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x is even\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x is odd\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. if\PYGZhy{}elif\PYGZhy{}else ladder}
+\PYG{n}{grade} \PYG{o}{=} \PYG{l+m+mi}{85}
+\PYG{k}{if} \PYG{n}{grade} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{90}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Grade: A\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{grade} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{80}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Grade: B\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{grade} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{70}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Grade: C\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Grade: F\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. Nested if statements}
+\PYG{n}{number} \PYG{o}{=} \PYG{l+m+mi}{42}
+\PYG{k}{if} \PYG{n}{number} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{number} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Positive even number\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Positive odd number\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Negative number or zero\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. Using logical \PYGZsq{}and\PYGZsq{}}
+\PYG{n}{age} \PYG{o}{=} \PYG{l+m+mi}{25}
+\PYG{k}{if} \PYG{n}{age} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{18} \PYG{o+ow}{and} \PYG{n}{age} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{65}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Adult and working age\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. Using logical \PYGZsq{}or\PYGZsq{}}
+\PYG{n}{language} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Python\PYGZdq{}}
+\PYG{k}{if} \PYG{n}{language} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Python\PYGZdq{}} \PYG{o+ow}{or} \PYG{n}{language} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Java\PYGZdq{}}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Popular programming language\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 7. Using logical \PYGZsq{}not\PYGZsq{}}
+\PYG{n}{is\PYGZus{}logged\PYGZus{}in} \PYG{o}{=} \PYG{k+kc}{False}
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{is\PYGZus{}logged\PYGZus{}in}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}User not logged in\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 8. Short form if\PYGZhy{}else (Ternary Expression)}
+\PYG{c+c1}{\PYGZsh{} → Python provides a one\PYGZhy{}line shorthand for simple if\PYGZhy{}else statements.}
+\PYG{c+c1}{\PYGZsh{} → Syntax: value\PYGZus{}if\PYGZus{}true if condition else value\PYGZus{}if\PYGZus{}false}
+\PYG{c+c1}{\PYGZsh{} → Returns: One of two values based on the boolean result of the condition.}
+
+\PYG{n}{value} \PYG{o}{=} \PYG{l+m+mi}{8}
+
+\PYG{c+c1}{\PYGZsh{} Traditional if\PYGZhy{}else version:}
+\PYG{k}{if} \PYG{n}{value} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n}{result} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Even\PYGZdq{}}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{result} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Odd\PYGZdq{}}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Traditional form:\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Even}
+
+\PYG{c+c1}{\PYGZsh{} Shortened using ternary expression:}
+\PYG{n}{result} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Even\PYGZdq{}} \PYG{k}{if} \PYG{n}{value} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0} \PYG{k}{else} \PYG{l+s+s2}{\PYGZdq{}Odd\PYGZdq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Ternary form:\PYGZdq{}}\PYG{p}{,} \PYG{n}{result}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} Even}
+
+\end{Verbatim}

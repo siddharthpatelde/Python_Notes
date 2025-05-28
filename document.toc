@@ -2,3 +2,4 @@
 \contentsline {section}{\numberline {2}Lesson 2: Input Function – Full Usage Guide}{4}{section.2}%
 \contentsline {section}{\numberline {3}Lesson 3: Math Operators – Full Usage Guide}{5}{section.3}%
 \contentsline {section}{\numberline {4}Lesson 4: Strings – Full Usage Guide}{6}{section.4}%
+\contentsline {section}{\numberline {5}Lesson 5: If, Else, and Conditional Operators}{8}{section.5}%

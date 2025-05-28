@@ -25,9 +25,6 @@ print(string1 * number)     # hellohellohellohellohello
 # 4. Invalid Concatenation Example
 # print(string1 + number)   # TypeError: can only concatenate str (not "int")
 
-
-
-
 # STRING METHODS – TOP 10 DEFINITIONS
 
 text = "hello WORLD"
