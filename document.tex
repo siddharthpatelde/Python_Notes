@@ -153,8 +153,6 @@
 	\end{tabular}
 	
 	
-	
-	
 	\section{Lesson 3: Math Operators – Full Usage Guide}
 	\inputminted{python}{Python_Files/math_operators_guid.py}
 	
@@ -227,6 +225,152 @@
 		\textit{Ternary Expression} & \texttt{value1 if condition else value2} & Result of \texttt{value1} or \texttt{value2} \\
 		\bottomrule
 	\end{tabular}
+	
+	\section{Lesson 6: While Loop – Full Usage Guide}
+	\inputminted{python}{Python_Files/while_loop_guid.py}
+	
+	
+	\vspace{1em}
+	\subsection*{Referenced Keywords and Operators – Syntax and Output Type}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{4cm} p{7.5cm} p{3cm}}
+		\toprule
+		Keyword / Operator & Syntax & Return / Effect \\
+		\midrule
+		
+		\texttt{while} & \texttt{while condition:} & Repeats block while condition is \texttt{True} \\
+		
+		\texttt{break} & \texttt{break} & Immediately exits the nearest enclosing loop \\
+		
+		\texttt{continue} & \texttt{continue} & Skips current iteration and continues with the next \\
+		
+		\texttt{+=} & \texttt{x += y} & Updates: \texttt{x = x + y} \\
+		
+		\texttt{-=} & \texttt{x -= y} & Updates: \texttt{x = x - y} \\
+		
+		\texttt{*=} & \texttt{x *= y} & Updates: \texttt{x = x * y} \\
+		
+		\texttt{/=} & \texttt{x /= y} & Updates: \texttt{x = x / y} \\
+		
+		\texttt{++} / \texttt{--} & Not supported in Python & Causes \texttt{SyntaxError} \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	
+
+	\section{Lesson 7: For Loop – Full Usage Guide}
+	\inputminted{python}{Python_Files/for_loop_guid.py}
+	
+	\vspace{1em}
+	\subsection*{Referenced Iteration Helpers – Syntax and Output Type}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{4cm} p{7.5cm} p{3cm}}
+		\toprule
+		Function / Method & Syntax & Return / Output Type \\
+		\midrule
+		
+		\texttt{tuple} & \texttt{(a, b, c)} & Iterable (ordered, immutable) \\
+		
+		\texttt{set} & \texttt{\{a, b, c\}} & Iterable (unordered, unique) \\
+		
+		\texttt{dict.items()} & \texttt{dict.items()} & Iterable of \texttt{(key, value)} pairs \\
+		
+		\texttt{enumerate()} & \texttt{enumerate(iterable)} & Iterable of \texttt{(index, item)} tuples \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	
+	\section{Lesson 8: Functions – Full Usage Guide}
+	\inputminted{python}{Python_Files/functions_guid.py}
+	
+	\section{Lesson 9: Lists – Introduction}
+	\inputminted{python}{Python_Files/list_intro_guid.py}
+	
+	\vspace{1em}
+	\subsection*{List Types and Creation Methods}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{4.2cm} p{7cm} p{2.8cm}}
+		\toprule
+		List Type & Syntax / Example & Notes \\
+		\midrule
+		
+		Homogeneous List & \texttt{[1, 2, 3, 4]} & All elements of the same type \\
+		
+		String List & \texttt{["apple", "banana"]} & List of strings \\
+		
+		Mixed-Type List & \texttt{["hi", 42, 3.14, True]} & Supports multiple data types \\
+		
+		Empty List & \texttt{[]} & No elements yet \\
+		
+		Nested List & \texttt{[[1, 2], [3, 4]]} & List inside a list \\
+		
+		From String & \texttt{list("abc")} & Converts string into list of characters \\
+		
+		From Range & \texttt{list(range(5))} & Converts range object into list \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	\section{Lesson 10: List Methods – General Usage}
+	\inputminted{python}{Python_Files/list_methods_general.py}
+	
+	\vspace{1em}
+	\subsection*{Common List Methods – Overview Table}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.5cm} p{6cm} p{3.5cm}}
+		\toprule
+		Method & Description & Return Value \\
+		\midrule
+		
+		\texttt{append(x)}   & Add element \texttt{x} to the end & \texttt{None} \\
+		\texttt{insert(i,x)} & Insert \texttt{x} at index \texttt{i} & \texttt{None} \\
+		\texttt{remove(x)}   & Remove first occurrence of \texttt{x} & \texttt{None} \\
+		\texttt{pop(i)}      & Remove and return item at index \texttt{i} (last by default) & Element \\
+		\texttt{clear()}     & Remove all items from the list & \texttt{None} \\
+		\texttt{copy()}      & Return a shallow copy of the list & List copy \\
+		\texttt{extend(iter)}& Append elements from iterable & \texttt{None} \\
+		\texttt{index(x)}    & Return first index of \texttt{x} (error if not found) & Integer \\
+		\texttt{count(x)}    & Count occurrences of \texttt{x} & Integer \\
+		\texttt{reverse()}   & Reverse items in-place & \texttt{None} \\
+		\texttt{sort()}      & Sort the list in-place & \texttt{None} \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	
+	
+	\section{Lesson 11: List Methods – Numeric Lists Only}
+	\inputminted{python}{Python_Files/list_methods_numeric.py}
+	
+	\vspace{1em}
+	\subsection*{List Methods for Numbers – Reference Table}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.5cm} p{6cm} p{3.5cm}}
+		\toprule
+		Method & Description & Return Value \\
+		\midrule
+		
+		\texttt{sort()}        & Sort list in ascending order (in-place) & \texttt{None} \\
+		\texttt{reverse()}     & Reverse the list (in-place) & \texttt{None} \\
+		\texttt{count(x)}      & Count how many times \texttt{x} appears & Integer \\
+		\texttt{max(lst)}      & Return maximum element & Element \\
+		\texttt{min(lst)}      & Return minimum element & Element \\
+		\texttt{sum(lst)}      & Sum of all list items & Numeric \\
+		\texttt{sorted(lst)}   & Return a new sorted list & New list \\
+		\texttt{avg = sum()/len()} & Compute average (manual) & Float \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	
+	
 	
 	
 	

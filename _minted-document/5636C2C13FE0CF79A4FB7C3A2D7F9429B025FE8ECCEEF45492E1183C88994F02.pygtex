@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} LIST METHODS – NUMERIC LISTS ONLY}
+
+\PYG{c+c1}{\PYGZsh{} These methods are especially useful and commonly used with lists that contain only numbers.}
+
+\PYG{c+c1}{\PYGZsh{} Numeric list for demonstration}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} 1. sort()}
+\PYG{c+c1}{\PYGZsh{} → Sorts the list in ascending order (in\PYGZhy{}place)}
+\PYG{n}{numbers}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}sort():\PYGZdq{}}\PYG{p}{,} \PYG{n}{numbers}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} [1, 2, 3, 5, 5, 8, 8]}
+
+\PYG{c+c1}{\PYGZsh{} 2. reverse()}
+\PYG{c+c1}{\PYGZsh{} → Reverses the list order in\PYGZhy{}place}
+\PYG{n}{numbers}\PYG{o}{.}\PYG{n}{reverse}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}reverse():\PYGZdq{}}\PYG{p}{,} \PYG{n}{numbers}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} [8, 8, 5, 5, 3, 2, 1]}
+
+\PYG{c+c1}{\PYGZsh{} 3. count()}
+\PYG{c+c1}{\PYGZsh{} → Counts occurrences of a specific number}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}count(5):\PYGZdq{}}\PYG{p}{,} \PYG{n}{numbers}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 2}
+
+\PYG{c+c1}{\PYGZsh{} 4. max()}
+\PYG{c+c1}{\PYGZsh{} → Returns the largest number in the list}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}max():\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 8}
+
+\PYG{c+c1}{\PYGZsh{} 5. min()}
+\PYG{c+c1}{\PYGZsh{} → Returns the smallest number in the list}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}min():\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 1}
+
+\PYG{c+c1}{\PYGZsh{} 6. sum()}
+\PYG{c+c1}{\PYGZsh{} → Returns the sum of all elements}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}sum():\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{sum}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 32}
+
+\PYG{c+c1}{\PYGZsh{} 7. average (manual)}
+\PYG{c+c1}{\PYGZsh{} → Average = sum / count}
+\PYG{n}{average} \PYG{o}{=} \PYG{n+nb}{sum}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{)} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Average:\PYGZdq{}}\PYG{p}{,} \PYG{n}{average}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} 4.571...}
+
+\PYG{c+c1}{\PYGZsh{} 8. sorted()}
+\PYG{c+c1}{\PYGZsh{} → Returns a new sorted list without modifying the original}
+\PYG{n}{original} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{]}
+\PYG{n}{sorted\PYGZus{}list} \PYG{o}{=} \PYG{n+nb}{sorted}\PYG{p}{(}\PYG{n}{original}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}original:\PYGZdq{}}\PYG{p}{,} \PYG{n}{original}\PYG{p}{)}       \PYG{c+c1}{\PYGZsh{} [10, 3, 7]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}sorted():\PYGZdq{}}\PYG{p}{,} \PYG{n}{sorted\PYGZus{}list}\PYG{p}{)}    \PYG{c+c1}{\PYGZsh{} [3, 7, 10]}
+\end{Verbatim}

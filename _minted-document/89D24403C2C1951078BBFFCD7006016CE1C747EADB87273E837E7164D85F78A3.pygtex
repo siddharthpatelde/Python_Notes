@@ -26,9 +26,6 @@
 \PYG{c+c1}{\PYGZsh{} 4. Invalid Concatenation Example}
 \PYG{c+c1}{\PYGZsh{} print(string1 + number)   \PYGZsh{} TypeError: can only concatenate str (not \PYGZdq{}int\PYGZdq{})}
 
-
-
-
 \PYG{c+c1}{\PYGZsh{} STRING METHODS – TOP 10 DEFINITIONS}
 
 \PYG{n}{text} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}hello WORLD\PYGZdq{}}

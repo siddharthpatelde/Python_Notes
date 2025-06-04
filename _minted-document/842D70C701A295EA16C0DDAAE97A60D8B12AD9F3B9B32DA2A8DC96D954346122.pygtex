@@ -1,0 +1,94 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} FOR LOOP – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Syntax:}
+\PYG{c+c1}{\PYGZsh{} for variable in iterable:}
+\PYG{c+c1}{\PYGZsh{}     block of code}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 1. Using range()}
+\PYG{c+c1}{\PYGZsh{} range(stop) → from 0 to stop\PYGZhy{}1}
+\PYG{c+c1}{\PYGZsh{} range(start, stop) → from start to stop\PYGZhy{}1}
+\PYG{c+c1}{\PYGZsh{} range(start, stop, step)}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}i =\PYGZdq{}}\PYG{p}{,} \PYG{n}{i}\PYG{p}{)}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}From 2 to 5:\PYGZdq{}}\PYG{p}{,} \PYG{n}{i}\PYG{p}{)}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Countdown by 2:\PYGZdq{}}\PYG{p}{,} \PYG{n}{i}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 2. Iterating over a list}
+\PYG{n}{fruits} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}apple\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}banana\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}cherry\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{for} \PYG{n}{fruit} \PYG{o+ow}{in} \PYG{n}{fruits}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Fruit:\PYGZdq{}}\PYG{p}{,} \PYG{n}{fruit}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. Iterating over a string}
+\PYG{n}{text} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}
+\PYG{k}{for} \PYG{n}{char} \PYG{o+ow}{in} \PYG{n}{text}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Char:\PYGZdq{}}\PYG{p}{,} \PYG{n}{char}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. Iterating over a tuple}
+\PYG{c+c1}{\PYGZsh{} A tuple is an ordered, immutable collection.}
+\PYG{c+c1}{\PYGZsh{} You can iterate through it just like a list.}
+\PYG{n}{coordinates} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{)}
+\PYG{k}{for} \PYG{n}{value} \PYG{o+ow}{in} \PYG{n}{coordinates}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Value:\PYGZdq{}}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZsh{} 5. Iterating over a set}
+\PYG{c+c1}{\PYGZsh{} A set is an unordered collection of unique elements.}
+\PYG{c+c1}{\PYGZsh{} Iteration works, but order is not guaranteed.}
+\PYG{n}{unique\PYGZus{}numbers} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{\PYGZcb{}}
+\PYG{k}{for} \PYG{n}{num} \PYG{o+ow}{in} \PYG{n}{unique\PYGZus{}numbers}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Unique:\PYGZdq{}}\PYG{p}{,} \PYG{n}{num}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZsh{} 6. Iterating over a dictionary}
+\PYG{c+c1}{\PYGZsh{} A dictionary stores key\PYGZhy{}value pairs.}
+\PYG{c+c1}{\PYGZsh{} Iterating over it by default gives you the keys.}
+\PYG{n}{person} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Alice\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}age\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{25}\PYG{p}{\PYGZcb{}}
+\PYG{k}{for} \PYG{n}{key} \PYG{o+ow}{in} \PYG{n}{person}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Key:\PYGZdq{}}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}| Value:\PYGZdq{}}\PYG{p}{,} \PYG{n}{person}\PYG{p}{[}\PYG{n}{key}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} 7. Iterating with .items()}
+\PYG{c+c1}{\PYGZsh{} .items() returns a list of (key, value) pairs from a dictionary.}
+\PYG{c+c1}{\PYGZsh{} Useful when you need both key and value at once.}
+\PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value} \PYG{o+ow}{in} \PYG{n}{person}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{key}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ =\PYGZgt{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{value}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 8. Using enumerate()}
+\PYG{c+c1}{\PYGZsh{} enumerate() gives both the index and the item during iteration.}
+\PYG{n}{colors} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{for} \PYG{n}{index}\PYG{p}{,} \PYG{n}{color} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{colors}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{index}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{color}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZsh{} 9. Using break}
+\PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{n} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{k}{break}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Breaking loop at:\PYGZdq{}}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 10. Using continue}
+\PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{n} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{:}
+        \PYG{k}{continue}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Continuing:\PYGZdq{}}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 11. Using else with for}
+\PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Loop completed without break.\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} range() – Recap:}
+\PYG{c+c1}{\PYGZsh{} range(stop)}
+\PYG{c+c1}{\PYGZsh{} range(start, stop)}
+\PYG{c+c1}{\PYGZsh{} range(start, stop, step)}
+\PYG{c+c1}{\PYGZsh{} returns a range object which is an iterable of numbers}
+\end{Verbatim}

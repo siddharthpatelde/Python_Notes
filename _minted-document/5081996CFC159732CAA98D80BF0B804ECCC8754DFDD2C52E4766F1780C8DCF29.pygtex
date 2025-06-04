@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} LISTS – INTRODUCTION}
+
+\PYG{c+c1}{\PYGZsh{} What is a list?}
+\PYG{c+c1}{\PYGZsh{} A list is a built\PYGZhy{}in data structure in Python that stores an ordered collection of items.}
+\PYG{c+c1}{\PYGZsh{} Lists are mutable, meaning you can change their contents after creation.}
+\PYG{c+c1}{\PYGZsh{} Defined using square brackets: []}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 1. Defining a simple list (homogeneous)}
+\PYG{n}{fruits} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}apple\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}banana\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}cherry\PYGZdq{}}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Fruits:\PYGZdq{}}\PYG{p}{,} \PYG{n}{fruits}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. List of numbers}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Numbers:\PYGZdq{}}\PYG{p}{,} \PYG{n}{numbers}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. List of mixed data types}
+\PYG{n}{mixed} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{42}\PYG{p}{,} \PYG{l+m+mf}{3.14}\PYG{p}{,} \PYG{k+kc}{True}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Mixed list:\PYGZdq{}}\PYG{p}{,} \PYG{n}{mixed}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. Empty list}
+\PYG{n}{empty} \PYG{o}{=} \PYG{p}{[]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Empty list:\PYGZdq{}}\PYG{p}{,} \PYG{n}{empty}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. Nested list (list inside a list)}
+\PYG{n}{matrix} \PYG{o}{=} \PYG{p}{[[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{],} \PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{]]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Nested list:\PYGZdq{}}\PYG{p}{,} \PYG{n}{matrix}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. List using list() constructor}
+\PYG{n}{from\PYGZus{}string} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}List from string:\PYGZdq{}}\PYG{p}{,} \PYG{n}{from\PYGZus{}string}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} [\PYGZsq{}h\PYGZsq{}, \PYGZsq{}e\PYGZsq{}, \PYGZsq{}l\PYGZsq{}, \PYGZsq{}l\PYGZsq{}, \PYGZsq{}o\PYGZsq{}]}
+
+\PYG{c+c1}{\PYGZsh{} 7. List from range()}
+\PYG{n}{range\PYGZus{}list} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}List from range():\PYGZdq{}}\PYG{p}{,} \PYG{n}{range\PYGZus{}list}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} [0, 1, 2, 3, 4]}
+\end{Verbatim}

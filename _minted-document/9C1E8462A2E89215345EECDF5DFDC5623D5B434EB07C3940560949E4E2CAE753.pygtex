@@ -1,0 +1,64 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} WHILE LOOP – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} Basic Syntax:}
+\PYG{c+c1}{\PYGZsh{} while condition:}
+\PYG{c+c1}{\PYGZsh{}     block of code}
+
+\PYG{c+c1}{\PYGZsh{} The code inside the loop runs repeatedly as long as the condition is True.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+\PYG{c+c1}{\PYGZsh{} 1. Basic while loop}
+\PYG{n}{counter} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{n}{counter} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Counter is:\PYGZdq{}}\PYG{p}{,} \PYG{n}{counter}\PYG{p}{)}
+    \PYG{n}{counter} \PYG{o}{+=} \PYG{l+m+mi}{1}  \PYG{c+c1}{\PYGZsh{} same as: counter = counter + 1}
+
+\PYG{c+c1}{\PYGZsh{} 2. Using break to exit loop early}
+\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{i} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Breaking at\PYGZdq{}}\PYG{p}{,} \PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{break}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+    \PYG{n}{i} \PYG{o}{+=} \PYG{l+m+mi}{1}
+
+\PYG{c+c1}{\PYGZsh{} 3. Using continue to skip to next iteration}
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+    \PYG{n}{x} \PYG{o}{+=} \PYG{l+m+mi}{1}
+    \PYG{k}{if} \PYG{n}{x} \PYG{o}{==} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{k}{continue}  \PYG{c+c1}{\PYGZsh{} skips printing 3}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x =\PYGZdq{}}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. while loop with else block}
+\PYG{n}{z} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{n}{z} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{3}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}z =\PYGZdq{}}\PYG{p}{,} \PYG{n}{z}\PYG{p}{)}
+    \PYG{n}{z} \PYG{o}{+=} \PYG{l+m+mi}{1}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Loop ended normally (no break)\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. Infinite loop (be careful!)}
+\PYG{c+c1}{\PYGZsh{} while True:}
+\PYG{c+c1}{\PYGZsh{}     print(\PYGZdq{}This runs forever\PYGZdq{})}
+
+\PYG{c+c1}{\PYGZsh{} 6. Compound condition}
+\PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{10} \PYG{o+ow}{and} \PYG{n}{n} \PYG{o}{!=} \PYG{l+m+mi}{7}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+    \PYG{n}{n} \PYG{o}{+=} \PYG{l+m+mi}{2}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Counter update operators}
+
+\PYG{c+c1}{\PYGZsh{} → counter += 1  → same as counter = counter + 1}
+\PYG{c+c1}{\PYGZsh{} → counter \PYGZhy{}= 1  → same as counter = counter \PYGZhy{} 1}
+\PYG{c+c1}{\PYGZsh{} → counter *= 2  → same as counter = counter * 2}
+\PYG{c+c1}{\PYGZsh{} → counter /= 2  → same as counter = counter / 2}
+
+\PYG{c+c1}{\PYGZsh{} Note:}
+\PYG{c+c1}{\PYGZsh{} Python does NOT support the ++ or \PYGZhy{}\PYGZhy{} operators like other languages.}
+\PYG{c+c1}{\PYGZsh{} Using x++ or x\PYGZhy{}\PYGZhy{} will cause a SyntaxError.}
+\end{Verbatim}

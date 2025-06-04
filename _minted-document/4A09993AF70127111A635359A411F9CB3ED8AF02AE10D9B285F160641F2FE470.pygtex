@@ -1,0 +1,74 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} LIST METHODS – GENERAL PURPOSE}
+
+\PYG{c+c1}{\PYGZsh{} Lists are mutable and support many built\PYGZhy{}in methods for adding, removing, searching, and modifying.}
+
+\PYG{c+c1}{\PYGZsh{} 1. append()}
+\PYG{c+c1}{\PYGZsh{} → Adds a single element to the end}
+\PYG{n}{items} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}pen\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}book\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{items}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}pencil\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}append():\PYGZdq{}}\PYG{p}{,} \PYG{n}{items}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. insert()}
+\PYG{c+c1}{\PYGZsh{} → Inserts an element at a specific index}
+\PYG{n}{items}\PYG{o}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}eraser\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}insert():\PYGZdq{}}\PYG{p}{,} \PYG{n}{items}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. remove()}
+\PYG{c+c1}{\PYGZsh{} → Removes the first matching value}
+\PYG{n}{items}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}book\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}remove():\PYGZdq{}}\PYG{p}{,} \PYG{n}{items}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. pop()}
+\PYG{c+c1}{\PYGZsh{} → Removes and returns element at index (default = last)}
+\PYG{n}{removed} \PYG{o}{=} \PYG{n}{items}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}pop():\PYGZdq{}}\PYG{p}{,} \PYG{n}{removed}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}After pop:\PYGZdq{}}\PYG{p}{,} \PYG{n}{items}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. clear()}
+\PYG{c+c1}{\PYGZsh{} → Empties the list}
+\PYG{n}{temp} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{temp}\PYG{o}{.}\PYG{n}{clear}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}clear():\PYGZdq{}}\PYG{p}{,} \PYG{n}{temp}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. copy()}
+\PYG{c+c1}{\PYGZsh{} → Returns a shallow copy}
+\PYG{n}{original} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}z\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{cloned} \PYG{o}{=} \PYG{n}{original}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}copy():\PYGZdq{}}\PYG{p}{,} \PYG{n}{cloned}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 7. extend()}
+\PYG{c+c1}{\PYGZsh{} → Adds multiple elements from another iterable}
+\PYG{n}{tools} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}pen\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}pencil\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{tools}\PYG{o}{.}\PYG{n}{extend}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}marker\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}sharpener\PYGZdq{}}\PYG{p}{])}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}extend():\PYGZdq{}}\PYG{p}{,} \PYG{n}{tools}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 8. index()  [Use with care]}
+\PYG{c+c1}{\PYGZsh{} → Finds index of first match; raises error if not found}
+\PYG{n}{names} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Alice\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Bob\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Charlie\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{idx} \PYG{o}{=} \PYG{n}{names}\PYG{o}{.}\PYG{n}{index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Bob\PYGZdq{}}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}index():\PYGZdq{}}\PYG{p}{,} \PYG{n}{idx}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ValueError}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Name not found\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Alternative using \PYGZsq{}in\PYGZsq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Eve\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{names}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} False}
+
+\PYG{c+c1}{\PYGZsh{} 9. count()}
+\PYG{c+c1}{\PYGZsh{} → Counts number of times an item appears}
+\PYG{n}{letters} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}count():\PYGZdq{}}\PYG{p}{,} \PYG{n}{letters}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 3}
+
+\PYG{c+c1}{\PYGZsh{} 10. reverse()}
+\PYG{c+c1}{\PYGZsh{} → Reverses the list in\PYGZhy{}place}
+\PYG{n}{words} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}start\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}middle\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}end\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{words}\PYG{o}{.}\PYG{n}{reverse}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}reverse():\PYGZdq{}}\PYG{p}{,} \PYG{n}{words}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 11. sort() [Only works if items are comparable]}
+\PYG{c+c1}{\PYGZsh{} → Sorts the list (only if all items can be compared)}
+\PYG{n}{languages} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}python\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}java\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{languages}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}sort():\PYGZdq{}}\PYG{p}{,} \PYG{n}{languages}\PYG{p}{)}
+\end{Verbatim}

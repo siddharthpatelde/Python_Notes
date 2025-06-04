@@ -3,3 +3,9 @@
 \contentsline {section}{\numberline {3}Lesson 3: Math Operators – Full Usage Guide}{5}{section.3}%
 \contentsline {section}{\numberline {4}Lesson 4: Strings – Full Usage Guide}{6}{section.4}%
 \contentsline {section}{\numberline {5}Lesson 5: If, Else, and Conditional Operators}{8}{section.5}%
+\contentsline {section}{\numberline {6}Lesson 6: While Loop – Full Usage Guide}{10}{section.6}%
+\contentsline {section}{\numberline {7}Lesson 7: For Loop – Full Usage Guide}{12}{section.7}%
+\contentsline {section}{\numberline {8}Lesson 8: Functions – Full Usage Guide}{13}{section.8}%
+\contentsline {section}{\numberline {9}Lesson 9: Lists – Introduction}{15}{section.9}%
+\contentsline {section}{\numberline {10}Lesson 10: List Methods – General Usage}{16}{section.10}%
+\contentsline {section}{\numberline {11}Lesson 11: List Methods – Numeric Lists Only}{17}{section.11}%
