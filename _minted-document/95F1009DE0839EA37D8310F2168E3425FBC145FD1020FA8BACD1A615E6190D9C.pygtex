@@ -1,0 +1,66 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} TUPLES – FULL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} 1. What is a tuple?}
+\PYG{c+c1}{\PYGZsh{} → A tuple is an immutable, ordered collection of items.}
+\PYG{c+c1}{\PYGZsh{} → Defined using parentheses: ()}
+
+\PYG{c+c1}{\PYGZsh{} 2. Tuple vs List – Key Differences:}
+\PYG{c+c1}{\PYGZsh{} → Tuples use ()     → Lists use []}
+\PYG{c+c1}{\PYGZsh{} → Tuples are immutable → Lists are mutable (can be changed)}
+\PYG{c+c1}{\PYGZsh{} → Tuples have fewer built\PYGZhy{}in methods}
+\PYG{c+c1}{\PYGZsh{} → Tuples are faster and used for fixed data}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 3. Defining tuples}
+
+\PYG{n}{empty\PYGZus{}tuple} \PYG{o}{=} \PYG{p}{()}
+\PYG{n}{single\PYGZus{}item} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}apple\PYGZdq{}}\PYG{p}{,)}   \PYG{c+c1}{\PYGZsh{} Note the comma!}
+\PYG{n}{fruits} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}apple\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}banana\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}cherry\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Fruits tuple:\PYGZdq{}}\PYG{p}{,} \PYG{n}{fruits}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}First item:\PYGZdq{}}\PYG{p}{,} \PYG{n}{fruits}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 4. What can we do with tuples?}
+
+\PYG{c+c1}{\PYGZsh{} Tuple concatenation}
+\PYG{n}{more\PYGZus{}fruits} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}mango\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}orange\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{combined} \PYG{o}{=} \PYG{n}{fruits} \PYG{o}{+} \PYG{n}{more\PYGZus{}fruits}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Combined tuple:\PYGZdq{}}\PYG{p}{,} \PYG{n}{combined}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Tuple unpacking}
+\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{z} \PYG{o}{=} \PYG{n}{fruits}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Unpacked:\PYGZdq{}}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{z}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Cannot change a tuple element}
+\PYG{c+c1}{\PYGZsh{} fruits[0] = \PYGZdq{}kiwi\PYGZdq{}  \PYGZsh{} TypeError}
+
+\PYG{c+c1}{\PYGZsh{} Cannot append or remove items}
+\PYG{c+c1}{\PYGZsh{} fruits.append(\PYGZdq{}kiwi\PYGZdq{})  \PYGZsh{} AttributeError}
+\PYG{c+c1}{\PYGZsh{} fruits.remove(\PYGZdq{}banana\PYGZdq{})  \PYGZsh{} AttributeError}
+
+\PYG{c+c1}{\PYGZsh{} You can delete the whole tuple}
+\PYG{n}{temp} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{k}{del} \PYG{n}{temp}
+\PYG{c+c1}{\PYGZsh{} print(temp)  \PYGZsh{} NameError if uncommented}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 5. Built\PYGZhy{}in functions usable with tuples}
+
+\PYG{n}{values} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 1. len()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Length:\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{values}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 4}
+
+\PYG{c+c1}{\PYGZsh{} 2. max()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Maximum:\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{values}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 30}
+
+\PYG{c+c1}{\PYGZsh{} 3. min()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Minimum:\PYGZdq{}}\PYG{p}{,} \PYG{n+nb}{min}\PYG{p}{(}\PYG{n}{values}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} 5}
+
+\PYG{c+c1}{\PYGZsh{} 4. tuple() constructor}
+\PYG{n}{sample\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}z\PYGZdq{}}\PYG{p}{]}
+\PYG{n}{converted} \PYG{o}{=} \PYG{n+nb}{tuple}\PYG{p}{(}\PYG{n}{sample\PYGZus{}list}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Converted to tuple:\PYGZdq{}}\PYG{p}{,} \PYG{n}{converted}\PYG{p}{)}
+\end{Verbatim}
