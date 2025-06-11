@@ -396,7 +396,72 @@
 		\bottomrule
 	\end{tabular}
 	
+	\section{Lesson 14: Sets – General Usage Guide}
+	\inputminted{python}{Python_Files/sets_guid_general.py}
 	
+	\vspace{1em}
+	\subsection*{General Set Methods – Syntax and Return Type}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.5cm} p{7cm} p{3cm}}
+		\toprule
+		Method & Description & Return Type \\
+		\midrule
+		
+		\texttt{add(x)}       & Adds element \texttt{x} to the set & \texttt{None} \\
+		\texttt{remove(x)}    & Removes \texttt{x}; error if not found & \texttt{None} \\
+		\texttt{discard(x)}   & Removes \texttt{x}; no error if not found & \texttt{None} \\
+		\texttt{pop()}        & Removes and returns an arbitrary element & Element \\
+		\texttt{clear()}      & Removes all items from the set & \texttt{None} \\
+		\texttt{copy()}       & Returns a shallow copy of the set & Set copy \\
+		\texttt{update(iter)} & Adds elements from another iterable & \texttt{None} \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	\section{Lesson 15: Sets – Mathematical Operations}
+	\inputminted{python}{Python_Files/sets_math_guid.py}
+	
+	\vspace{1em}
+	\subsection*{Set Operations – Syntax and Result}
+	
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{4cm} p{6.5cm} p{3cm}}
+		\toprule
+		Method / Operator & Description & Return Type \\
+		\midrule
+		
+		\texttt{a.union(b)} / \texttt{a | b} & All unique elements from both sets & New set \\
+		\texttt{a.update(b)} & Adds all elements from b to a & \texttt{None} (in-place) \\
+		
+		\texttt{a.intersection(b)} / \texttt{a \& b} & Elements common to both sets & New set \\
+		\texttt{a.intersection\_update(b)} & Keeps only common elements in a & \texttt{None} (in-place) \\
+		
+		\texttt{a.difference(b)} / \texttt{a - b} & Elements in a but not in b & New set \\
+		\texttt{a.difference\_update(b)} & Removes items in b from a & \texttt{None} (in-place) \\
+		
+		\texttt{a.symmetric\_difference(b)} / \texttt{a \textasciicircum{} b} & Elements in a or b, not both & New set \\
+		\texttt{a.symmetric\_difference\_update(b)} & Updates a to symmetric diff & \texttt{None} (in-place) \\
+		
+		\bottomrule
+	\end{tabular}
+
+\vspace{1em}
+\subsection*{Set Comparison – Membership and Relationship}
+
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{4.5cm} p{7.2cm} p{2cm}}
+	\toprule
+	Method & Description & Returns \\
+	\midrule
+	
+	\texttt{a.issubset(b)}     & True if all elements of a are in b     & Boolean \\
+	\texttt{a.issuperset(b)}   & True if a contains all elements of b   & Boolean \\
+	\texttt{a.isdisjoint(b)}   & True if a and b have no elements in common & Boolean \\
+	
+	\bottomrule
+\end{tabular}
+
 	
 	
 	

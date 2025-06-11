@@ -1,0 +1,60 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} SETS – MATHEMATICAL OPERATIONS}
+
+\PYG{c+c1}{\PYGZsh{} We use sets to perform classic mathematical operations like:}
+\PYG{c+c1}{\PYGZsh{} union, intersection, difference, symmetric difference, etc.}
+
+\PYG{n}{a} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{\PYGZcb{}}
+\PYG{n}{b} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 1. union() – combines both sets}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Union:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{union}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))}       \PYG{c+c1}{\PYGZsh{} \PYGZob{}1, 2, 3, 4, 5, 6\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Using | :\PYGZdq{}}\PYG{p}{,} \PYG{n}{a} \PYG{o}{|} \PYG{n}{b}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. update() – adds elements from b to a}
+\PYG{n}{a1} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+\PYG{n}{a1}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Update:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a1}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 3. intersection() – common elements}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Intersection:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{intersection}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} \PYGZob{}3, 4\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Using \PYGZam{} :\PYGZdq{}}\PYG{p}{,} \PYG{n}{a} \PYG{o}{\PYGZam{}} \PYG{n}{b}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. intersection\PYGZus{}update() – keeps only common elements in a}
+\PYG{n}{a2} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+\PYG{n}{a2}\PYG{o}{.}\PYG{n}{intersection\PYGZus{}update}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Intersection Update:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a2}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 5. difference() – items in a but not in b}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Difference (a \PYGZhy{} b):\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{difference}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} \PYGZob{}1, 2\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Using \PYGZhy{} :\PYGZdq{}}\PYG{p}{,} \PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{b}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. difference\PYGZus{}update() – removes items in b from a}
+\PYG{n}{a3} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+\PYG{n}{a3}\PYG{o}{.}\PYG{n}{difference\PYGZus{}update}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Difference Update:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a3}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 7. symmetric\PYGZus{}difference() – elements in a or b but not both}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Symmetric Difference:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{symmetric\PYGZus{}difference}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} \PYGZob{}1, 2, 5, 6\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Using \PYGZca{} :\PYGZdq{}}\PYG{p}{,} \PYG{n}{a} \PYG{o}{\PYGZca{}} \PYG{n}{b}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 8. symmetric\PYGZus{}difference\PYGZus{}update() – modifies a to symmetric diff}
+\PYG{n}{a4} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+\PYG{n}{a4}\PYG{o}{.}\PYG{n}{symmetric\PYGZus{}difference\PYGZus{}update}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Symmetric Difference Update:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a4}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 9. issubset()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Is a subset of b:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{issubset}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} False}
+
+\PYG{c+c1}{\PYGZsh{} 10. issuperset()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Is a superset of b:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{issuperset}\PYG{p}{(}\PYG{n}{b}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} False}
+
+\PYG{c+c1}{\PYGZsh{} 11. isdisjoint()}
+\PYG{n}{x} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Is disjoint:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n}{isdisjoint}\PYG{p}{(}\PYG{n}{x}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} True (no common elements)}
+\end{Verbatim}

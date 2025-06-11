@@ -1,0 +1,59 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} SETS – GENERAL USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} 1. What is a set?}
+\PYG{c+c1}{\PYGZsh{} → A set is an unordered, unindexed collection with no duplicate elements.}
+\PYG{c+c1}{\PYGZsh{} → Defined using curly braces \PYGZob{}\PYGZcb{} or the set() constructor.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 2. Creating a set}
+
+\PYG{c+c1}{\PYGZsh{} From a list with duplicates}
+\PYG{n}{values} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{]}
+\PYG{n}{unique\PYGZus{}values} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{(}\PYG{n}{values}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Set from list:\PYGZdq{}}\PYG{p}{,} \PYG{n}{unique\PYGZus{}values}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} \PYGZob{}2, 3, 4, 5\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} Direct set definition}
+\PYG{n}{colors} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Set of colors:\PYGZdq{}}\PYG{p}{,} \PYG{n}{colors}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Empty set must be created using set()}
+\PYG{n}{empty\PYGZus{}set} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Empty set:\PYGZdq{}}\PYG{p}{,} \PYG{n}{empty\PYGZus{}set}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 3. General set methods}
+
+\PYG{c+c1}{\PYGZsh{} 1. add()}
+\PYG{n}{colors}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}yellow\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}After add():\PYGZdq{}}\PYG{p}{,} \PYG{n}{colors}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 2. remove()}
+\PYG{n}{colors}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Raises error if not found}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}After remove():\PYGZdq{}}\PYG{p}{,} \PYG{n}{colors}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 3. discard()}
+\PYG{n}{colors}\PYG{o}{.}\PYG{n}{discard}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Safe: no error if not found}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}After discard():\PYGZdq{}}\PYG{p}{,} \PYG{n}{colors}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 4. pop()}
+\PYG{n}{item} \PYG{o}{=} \PYG{n}{colors}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Removes random item (sets are unordered)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Popped:\PYGZdq{}}\PYG{p}{,} \PYG{n}{item}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 5. clear()}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{\PYGZcb{}}
+\PYG{n}{numbers}\PYG{o}{.}\PYG{n}{clear}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}After clear():\PYGZdq{}}\PYG{p}{,} \PYG{n}{numbers}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 6. copy()}
+\PYG{n}{original} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+\PYG{n}{cloned} \PYG{o}{=} \PYG{n}{original}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Copy of set:\PYGZdq{}}\PYG{p}{,} \PYG{n}{cloned}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 7. update()}
+\PYG{n}{colors}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}white\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}black\PYGZdq{}}\PYG{p}{\PYGZcb{})}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}After update():\PYGZdq{}}\PYG{p}{,} \PYG{n}{colors}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Sets do NOT support indexing or duplicate elements.}
+\end{Verbatim}

@@ -11,3 +11,5 @@
 \contentsline {section}{\numberline {11}Lesson 11: List Methods – Numeric Lists Only}{17}{section.11}%
 \contentsline {section}{\numberline {12}Lesson 12: 2D Lists and Nested Loops}{18}{section.12}%
 \contentsline {section}{\numberline {13}Lesson 13: Tuples – Full Usage Guide}{19}{section.13}%
+\contentsline {section}{\numberline {14}Lesson 14: Sets – General Usage Guide}{20}{section.14}%
+\contentsline {section}{\numberline {15}Lesson 15: Sets – Mathematical Operations}{22}{section.15}%
