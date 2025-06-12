@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{s} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}der\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}die\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}das\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}und\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}er\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}sie\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}es\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}du\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{word} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{word} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Ende\PYGZdq{}}\PYG{p}{:}
+        \PYG{k}{break}
+    \PYG{k}{if} \PYG{n}{word} \PYG{o+ow}{in} \PYG{n}{s}\PYG{p}{:}
+        \PYG{n}{s}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{word}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Removed\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Not found\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+\end{Verbatim}

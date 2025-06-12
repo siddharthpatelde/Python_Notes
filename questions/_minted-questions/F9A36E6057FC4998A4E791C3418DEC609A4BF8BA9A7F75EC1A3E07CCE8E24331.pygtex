@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{tab} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}Mo\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Di\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Mi\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Do\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Fr\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Sa\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}So\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{7}\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{for} \PYG{n}{key} \PYG{o+ow}{in} \PYG{n}{tab}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{key}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{tab}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

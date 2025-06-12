@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{random}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{seed}\PYG{p}{,} \PYG{n}{choice}
+
+\PYG{n}{seed}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{n}{sentence} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}
+\PYG{n}{words} \PYG{o}{=} \PYG{n}{sentence}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{choice}\PYG{p}{(}\PYG{n}{words}\PYG{p}{))}
+\end{Verbatim}

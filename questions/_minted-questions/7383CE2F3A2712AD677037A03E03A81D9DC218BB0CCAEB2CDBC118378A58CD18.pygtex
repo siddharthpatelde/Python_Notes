@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{words} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{()}
+
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{entry} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{entry} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Ende\PYGZdq{}}\PYG{p}{:}
+        \PYG{k}{break}
+    \PYG{n}{words}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{entry}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{words}\PYG{p}{)}
+\end{Verbatim}

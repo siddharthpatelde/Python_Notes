@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{sentence1} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Sentence 1: \PYGZdq{}}\PYG{p}{)}
+\PYG{n}{sentence2} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Sentence 2: \PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{set1} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{(}\PYG{n}{sentence1}\PYG{o}{.}\PYG{n}{split}\PYG{p}{())}
+\PYG{n}{set2} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{(}\PYG{n}{sentence2}\PYG{o}{.}\PYG{n}{split}\PYG{p}{())}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{set1} \PYG{o}{\PYGZam{}} \PYG{n}{set2}\PYG{p}{)}
+\end{Verbatim}

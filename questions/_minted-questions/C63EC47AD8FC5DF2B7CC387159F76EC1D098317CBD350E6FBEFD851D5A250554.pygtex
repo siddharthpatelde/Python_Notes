@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{seed}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{))}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{randrange}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{))}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{random}\PYG{p}{())}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{choice}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}red\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}yellow\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}green\PYGZsq{}}\PYG{p}{]))}
+\end{Verbatim}

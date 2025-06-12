@@ -484,12 +484,287 @@ Write a program that allows the user to input multiple integers in a single line
 \inputminted{python}{Files/5/5.py}
 
 
+\section{Importing Modules and Libraries – Using Built-in Functionality}
+
+\subsection*{Q1: Simulating Dice Rolls with \texttt{random.randint()}}
+Write a program that asks the user how many times a die should be rolled. Then generate that many random integers between 1 and 6 using \texttt{random.randint()}. Make sure to call \texttt{random.seed(0)} at the beginning so that the sequence is repeatable.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Rolls: \textcolor{blue}{\textit{3}}}\\
+	\texttt{4\\4\\1}
+\end{flushleft}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/6/1.py}
+
+\subsection*{Q2: Random Word Selection Using \texttt{from ... import}}
+Write a program that imports only \texttt{seed()} and \texttt{choice()} from the \texttt{random} module. Use \texttt{seed(0)}, then ask the user to enter a sentence. Split the sentence into words and use \texttt{choice()} to randomly pick one word to display.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{red yellow blue}}}\\
+	\texttt{blue}
+\end{flushleft}
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/6/2.py}
+
+\subsection*{Q3: Full Access to All \texttt{random} Functions}
+Given the following main program:
+
+\begin{minted}{python}
+	seed(0)
+	print(randint(1, 10))
+	print(randrange(1, 10))
+	print(random())
+	print(choice(['red', 'yellow', 'green']))
+\end{minted}
+
+Complete the code so that all \texttt{random} functions are accessible directly, without using the \texttt{random.} prefix.
 
 
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/6/3.py}
+
+
+\section{Lists and Tuples – Access, Operations, and Manual Algorithms}
+
+\subsection*{Q1: Accessing List Elements}
+Given the list:
+
+\begin{minted}{python}
+	lst = [1, 3, 9, -11, 2, 0, 21]
+\end{minted}
+
+Access and print the second and last element of the list. Then create a new list containing the 3rd, 4th, and 5th elements and print it.
+
+\textbf{Expected Output:}
+\begin{flushleft}
+	\texttt{3}\\
+	\texttt{21}\\
+	\texttt{[9, -11, 2]}
+\end{flushleft}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/7/1.py}
+
+\subsection*{Q2: Element-wise Addition of Equal-Length Lists}
+Given:
+
+\begin{minted}{python}
+	lst1 = [1, 3, 9, -11, 2, 0, 21]
+	lst2 = [2, 1, -2, 0, 3, -2, -11]
+\end{minted}
+
+Write a program that adds the lists element by element and stores the result in a new list.
+
+\textbf{Expected Output:}\\
+\texttt{Result: [3, 4, 7, -11, 5, -2, 10]}
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/7/2.py}
+
+\subsection*{Q3: Element-wise Addition with Unequal Lengths}
+Now allow \texttt{lst1} and \texttt{lst2} to have different lengths. When that’s the case, append the extra elements from the longer list to the result.
+
+\begin{minted}{python}
+	lst1 = [1, 3, 9, -11, 2, 0, 21]
+	lst2 = [2, 1, -2, 0, 3, -2, -11, 4, 8]
+\end{minted}
+
+\textbf{Expected Output:}\\
+\texttt{Result: [3, 4, 7, -11, 5, -2, 10, 4, 8]}
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/7/3.py}
+
+\subsection*{Q4: Convert User Input to List of Integers}
+Prompt the user to enter numbers in a single line. Convert them into integers and store them in a list.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{1 2 3 4 5}}}\\
+	\texttt{Result: [1, 2, 3, 4, 5]}
+\end{flushleft}
+
+
+
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/7/4.py}
+
+\subsection*{Q5: Sort List Without Using \texttt{sort()} or \texttt{sorted()}}
+Given the list:
+
+\begin{minted}{python}
+	lst = [1, 3, 9, -11, 2, 0, 21]
+\end{minted}
+
+Write a program that sorts the list in ascending order using your own sorting algorithm (e.g., selection or bubble sort).
+
+\textbf{Expected Output:}\\
+\texttt{Result: [-11, 0, 1, 2, 3, 9, 21]}
+
+
+\subsection*{Q5 – Solution}
+\inputminted{python}{Files/7/5.py}
+
+
+	\section{Dictionaries – Key-Value Data Storage and Access}
 	
+	\subsection*{Q1: Loop Through Dictionary Keys and Values}
+	Given the dictionary:
+	
+	\begin{minted}{python}
+		tab = {'Mo': 1, 'Di': 2, 'Mi': 3, 'Do': 4, 'Fr': 5, 'Sa': 6, 'So': 7}
+	\end{minted}
+	
+	Write a program that prints each key and its corresponding value on a separate line.
+	
+	\textbf{Expected Output:}
+	\begin{flushleft}
+		\texttt{Mo: 1\\Di: 2\\Mi: 3\\Do: 4\\Fr: 5\\Sa: 6\\So: 7}
+	\end{flushleft}
+	
+	\subsection*{Q1 – Solution}
+	\inputminted{python}{Files/8/1.py}
+	
+	\subsection*{Q2: Check If a Key Exists in Dictionary}
+	Using the same dictionary \texttt{tab}, prompt the user for input. If the input is a key in the dictionary, print its value. Otherwise, print \texttt{"Unknown word"}.
+	
+	\textbf{Example 1:}
+	\begin{flushleft}
+		\texttt{Input: \textcolor{blue}{\textit{Mi}}}\\
+		\texttt{3}
+	\end{flushleft}
+	
+	\textbf{Example 2:}
+	\begin{flushleft}
+		\texttt{Input: \textcolor{blue}{\textit{Mittwoch}}}\\
+		\texttt{Unknown word}
+	\end{flushleft}
+	
+	
+	\subsection*{Q2 – Solution}
+	\inputminted{python}{Files/8/2.py}
+	
+	\subsection*{Q3: Count Character Frequency Using Dictionary}
+	Prompt the user to enter a sentence. Use a dictionary to count the number of times each character appears. Output the dictionary.
+	
+	\textbf{Example:}
+	\begin{flushleft}
+		\texttt{Input: \textcolor{blue}{\textit{Eins und Eins ist Zwei}}}\\
+		\texttt{Result: \{'E': 2, 'i': 4, 'n': 3, 's': 3, ' ': 4, 'u': 1, 'd': 1, 't': 1, 'Z': 1, 'w': 1, 'e': 1\}}
+	\end{flushleft}
+	
+	\subsection*{Q3 – Solution}
+	\inputminted{python}{Files/8/3.py}
+	
+	\subsection*{Q4: Interactive Dictionary with Update and Lookup}
+	Write a program that starts with an empty dictionary \texttt{tab}. In a loop, prompt the user for input:
+	
+	\begin{itemize}
+		\item If the input contains a single word and the key exists in \texttt{tab}, print the value.
+		\item If the key doesn’t exist, print \texttt{"Unknown word"}.
+		\item If the input contains two words, insert the first as key and second as value. Print \texttt{"New entry"}.
+		\item If the input is \texttt{Ende}, stop and print the dictionary.
+	\end{itemize}
+	
+	\textbf{Example:}
+	\begin{flushleft}
+		\texttt{Input: \textcolor{blue}{\textit{Hallo}}}\\
+		\texttt{Unknown word}\\
+		\texttt{Input: \textcolor{blue}{\textit{Hallo Welt}}}\\
+		\texttt{New entry}\\
+		\texttt{Input: \textcolor{blue}{\textit{Hallo}}}\\
+		\texttt{Welt}\\
+		\texttt{Input: \textcolor{blue}{\textit{Ende}}}\\
+		\texttt{\{'Hallo': 'Welt'\}}
+	\end{flushleft}
+	
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/8/4.py}
 
+\section{Sets – Unique Collections and Set Operations}
 
+\subsection*{Q1: Collect Unique Words Until “Ende”}
+Write a program that asks the user to enter words in a loop. Store each word in a set. Stop when the user enters \texttt{Ende}. The word \texttt{Ende} should not be included in the set. After termination, print the resulting set.
 
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{Hallo}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{Berlin}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{Hallo}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{Welt}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{Ende}}}\\
+	\texttt{\{'Hallo', 'Welt', 'Berlin'\}}
+\end{flushleft}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/9/1.py}
+
+\subsection*{Q2: Remove Words from a Set}
+Given the set:
+
+\begin{minted}{python}
+	s = {'der', 'die', 'das', 'und', 'er', 'sie', 'es', 'du'}
+\end{minted}
+
+Prompt the user for words. If the word is in the set, remove it and print \texttt{Removed}. If it’s not in the set, print \texttt{Not found}. Stop on \texttt{Ende} and print the set.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{Hallo}}}\\
+	\texttt{Not found}\\
+	\texttt{Input: \textcolor{blue}{\textit{und}}}\\
+	\texttt{Removed}\\
+	\texttt{Input: \textcolor{blue}{\textit{und}}}\\
+	\texttt{Not found}\\
+	\texttt{Input: \textcolor{blue}{\textit{Ende}}}\\
+	\texttt{\{'der', 'die', 'das', 'er', 'sie', 'es', 'du'\}}
+\end{flushleft}
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/9/2.py}
+
+\subsection*{Q3: Intersection of Word Sets from Two Sentences}
+Prompt the user to enter two sentences. Split the sentences into words and store them in sets. Then compute and print the intersection.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Sentence 1: \textcolor{blue}{\textit{Der Löwe ist der Adler unter den Katzen}}}\\
+	\texttt{Sentence 2: \textcolor{blue}{\textit{Der Adler ist der Löwen unter den Piematzen}}}\\
+	\texttt{\{'der', 'unter', 'ist', 'Der', 'den', 'Adler'\}}
+\end{flushleft}
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/9/3.py}
+
+\subsection*{Q4: Union of Word Sets from Two Sentences}
+Same as Q3, but compute the union of the sets instead.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Sentence 1: \textcolor{blue}{\textit{Der Löwe ist der Adler unter den Katzen}}}\\
+	\texttt{Sentence 2: \textcolor{blue}{\textit{Der Adler ist der Löwen unter den Piematzen}}}\\
+	\texttt{\{'Der', 'Katzen', 'der', 'Piematzen', 'Adler', 'den', 'Löwe', 'unter', 'Löwen', 'ist'\}}
+\end{flushleft}
+
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/9/4.py}
+
+\subsection*{Q5: Difference – Words in First Sentence Only}
+Now compute the difference of the two sets: words that are in the first sentence but not in the second.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Sentence 1: \textcolor{blue}{\textit{Der Löwe ist der Adler unter den Katzen}}}\\
+	\texttt{Sentence 2: \textcolor{blue}{\textit{Der Adler ist der Löwen unter den Piematzen}}}\\
+	\texttt{\{'Katzen', 'Löwe'\}}
+\end{flushleft}
+
+\subsection*{Q5 – Solution}
+\inputminted{python}{Files/9/5.py}
 
 
 	

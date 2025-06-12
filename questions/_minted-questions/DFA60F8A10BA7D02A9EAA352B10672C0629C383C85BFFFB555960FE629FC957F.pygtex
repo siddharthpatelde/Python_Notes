@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{tab} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{user\PYGZus{}input} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+
+    \PYG{k}{if} \PYG{n}{user\PYGZus{}input} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Ende\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tab}\PYG{p}{)}
+        \PYG{k}{break}
+
+    \PYG{n}{parts} \PYG{o}{=} \PYG{n}{user\PYGZus{}input}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()}
+
+    \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{parts}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{n}{key} \PYG{o}{=} \PYG{n}{parts}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+        \PYG{k}{if} \PYG{n}{key} \PYG{o+ow}{in} \PYG{n}{tab}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tab}\PYG{p}{[}\PYG{n}{key}\PYG{p}{])}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Unknown word\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{elif} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{parts}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{2}\PYG{p}{:}
+        \PYG{n}{key}\PYG{p}{,} \PYG{n}{value} \PYG{o}{=} \PYG{n}{parts}
+        \PYG{n}{tab}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{n}{value}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}New entry\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
