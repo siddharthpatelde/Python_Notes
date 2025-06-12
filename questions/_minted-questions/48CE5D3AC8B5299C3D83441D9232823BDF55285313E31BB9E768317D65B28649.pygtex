@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{total}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{n} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n}{n}
+    \PYG{k}{return} \PYG{n}{n} \PYG{o}{+} \PYG{n}{total}\PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}n = \PYGZdq{}}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Sum =\PYGZdq{}}\PYG{p}{,} \PYG{n}{total}\PYG{p}{(}\PYG{n}{n}\PYG{p}{))}
+\end{Verbatim}

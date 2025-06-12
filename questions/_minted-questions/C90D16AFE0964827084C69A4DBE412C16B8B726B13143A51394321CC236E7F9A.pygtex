@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{text} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+    \PYG{k}{if} \PYG{n}{text}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}ende\PYGZdq{}}\PYG{p}{:}
+        \PYG{k}{break}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Output:\PYGZdq{}}\PYG{p}{,} \PYG{n}{text}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{())}
+\end{Verbatim}

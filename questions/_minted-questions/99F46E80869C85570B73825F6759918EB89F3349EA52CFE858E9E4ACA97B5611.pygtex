@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{factorial}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{n}{result} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{):}
+        \PYG{n}{result} \PYG{o}{*=} \PYG{n}{i}
+    \PYG{k}{return} \PYG{n}{result}
+
+\PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}n = \PYGZdq{}}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}n! =\PYGZdq{}}\PYG{p}{,} \PYG{n}{factorial}\PYG{p}{(}\PYG{n}{n}\PYG{p}{))}
+\end{Verbatim}

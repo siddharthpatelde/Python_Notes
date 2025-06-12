@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{rect}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{):}
+    \PYG{n}{area} \PYG{o}{=} \PYG{n}{a} \PYG{o}{*} \PYG{n}{b}
+    \PYG{n}{perimeter} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{o}{*} \PYG{p}{(}\PYG{n}{a} \PYG{o}{+} \PYG{n}{b}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{area}\PYG{p}{,} \PYG{n}{perimeter}
+
+\PYG{n}{a} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}a = \PYGZdq{}}\PYG{p}{))}
+\PYG{n}{b} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}b = \PYGZdq{}}\PYG{p}{))}
+
+\PYG{n}{area}\PYG{p}{,} \PYG{n}{perimeter} \PYG{o}{=} \PYG{n}{rect}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Area =\PYGZdq{}}\PYG{p}{,} \PYG{n}{area}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Perimeter =\PYGZdq{}}\PYG{p}{,} \PYG{n}{perimeter}\PYG{p}{)}
+\end{Verbatim}

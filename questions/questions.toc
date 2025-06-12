@@ -1,3 +1,5 @@
 \contentsline {section}{\numberline {1}If Else – Decision Making in Python}{3}{section.1}%
 \contentsline {section}{\numberline {2}Match Statement – Pattern Matching in Python}{6}{section.2}%
 \contentsline {section}{\numberline {3}The \texttt {for} Loop – Counting, Iteration, and Containers}{8}{section.3}%
+\contentsline {section}{\numberline {4}Functions – Parameters, Return Values, and Reusability}{10}{section.4}%
+\contentsline {section}{\numberline {5}The \texttt {while} Loop – Manual Iteration and Termination Conditions}{13}{section.5}%

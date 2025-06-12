@@ -323,6 +323,169 @@
 	
 
 
+\section{Functions – Parameters, Return Values, and Reusability}
+
+\subsection*{Q1: Average of Three Numbers}
+Write a function that accepts three floating-point numbers as parameters and returns their average. Add a main program that asks the user to enter three values and then calls the function and displays the result.
+
+\textbf{Example:}\\
+\texttt{a = \textcolor{blue}{\textit{12}}}\\
+\texttt{b = \textcolor{blue}{\textit{18}}}\\
+\texttt{c = \textcolor{blue}{\textit{6}}}\\
+\texttt{Average = 12}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/4/1.py}
+
+\subsection*{Q2: Factorial Function}
+Write a function that receives an integer \texttt{n} as a parameter and returns \texttt{n!}. Add a main program that gets input from the user and prints the result.
+
+\textbf{Example:}\\
+\texttt{n = \textcolor{blue}{\textit{4}}}\\
+\texttt{n! = 24}
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/4/2.py}
+
+\subsection*{Q3: Area and Perimeter of Rectangle}
+Write a function \texttt{rect(a, b)} that receives two sides of a rectangle and returns the area and perimeter. Add a main program that takes inputs and prints both results.
+
+\textbf{Example:}\\
+\texttt{a = \textcolor{blue}{\textit{4}}}\\
+\texttt{b = \textcolor{blue}{\textit{3}}}\\
+\texttt{Area = 12}\\
+\texttt{Perimeter = 14}
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/4/3.py}
+
+\subsection*{Q4: Count Vowels Using Function}
+Write a function that accepts a string \texttt{s} and a letter \texttt{letter}, and returns how often that letter appears (case-insensitive). In the main program, prompt for a string and print the number of occurrences of \texttt{a, e, i, o, u}.
+
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/4/4.py}
+
+\textbf{Example:}\\
+\texttt{Input: \textcolor{blue}{\textit{Die Summe der Kathetenquadrate ist Gleich dem Hypotenusenquadrat}}}\\
+\texttt{a: 5\\e: 10\\i: 3\\o: 1\\u: 4}
+
+\subsection*{Q5: Custom \texttt{join()} Implementation}
+Write a function \texttt{myJoin(lst, sep)} that replicates the behavior of \texttt{join()} without actually using it. It should combine list elements into a single string, separated by \texttt{sep}.
+
+\textbf{Test Code:}
+\begin{minted}{python}
+	mylist = ['Wir', 'müssen', 'uns', 'Sisyphos', 'als', 'einen', 'glücklichen', 'Menschen', 'vorstellen']
+	mystring = myJoin(mylist, '-')
+	print(mystring)
+\end{minted}
+
+\textbf{Expected Output:}\\
+\texttt{Wir-müssen-uns-Sisyphos-als-einen-glücklichen-Menschen-vorstellen}
+
+\subsection*{Q5 – Solution}
+\inputminted{python}{Files/4/5.py}
+
+
+\subsection*{Q6: Recursive Sum Function}
+Write a recursive function \texttt{total(n)} that returns the sum from 1 to \texttt{n} without using loops. Include a main program to prompt the user and show the result.
+
+\textbf{Example:}\\
+\texttt{n = \textcolor{blue}{\textit{4}}}\\
+\texttt{Sum = 10}
+
+
+
+
+\subsection*{Q6 – Solution}
+\inputminted{python}{Files/4/6.py}
+
+
+\section{The \texttt{while} Loop – Manual Iteration and Termination Conditions}
+
+\subsection*{Q1: Rewrite a \texttt{for}-loop as a \texttt{while}-loop (0 to 4)}
+Given the following \texttt{for}-loop:
+
+\begin{minted}{python}
+	for i in range(5):
+	print(i)
+\end{minted}
+
+Rewrite it using a \texttt{while}-loop to produce the same output:
+
+\textbf{Expected Output:}\\
+\texttt{0\\1\\2\\3\\4}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/5/1.py}
+
+
+\subsection*{Q2: Rewrite a \texttt{for}-loop with start, stop, step}
+Given the following \texttt{for}-loop:
+
+\begin{minted}{python}
+	for i in range(5, 13, 2):
+	print(i)
+\end{minted}
+
+Rewrite it using a \texttt{while}-loop to produce the same output:
+
+\textbf{Expected Output:}\\
+\texttt{5\\7\\9\\11}
+
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/5/2.py}
+
+\subsection*{Q3: Capitalize User Input Until “Ende”}
+Write a program that reads user input, converts it to uppercase, and prints it. The loop should end when the user enters \texttt{ende} (case-insensitive). Use a \texttt{while}-loop.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{hallo welt}}}\\
+	\texttt{Output: HALLO WELT}\\
+	\texttt{Input: \textcolor{blue}{\textit{Noch ein Test}}}\\
+	\texttt{Output: NOCH EIN TEST}\\
+	\texttt{Input: \textcolor{blue}{\textit{Ende}}}
+\end{flushleft}
+
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/5/3.py}
+
+\subsection*{Q4: Sum Until Empty Input}
+Write a program that asks the user to input integers, one at a time, inside a \texttt{while}-loop. When the user enters an empty line, stop and display the sum. Ignore extra spaces.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{1}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{   55}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{7}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{}}}\\
+	\texttt{Sum: 63}
+\end{flushleft}
+
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/5/4.py}
+
+\subsection*{Q5: Sum from Multi-Value Inputs with Nested Loops}
+Write a program that allows the user to input multiple integers in a single line (space-separated). Continue until an empty line is entered, then print the total sum. Use only \texttt{while}-loops.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{1 3 5}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{   7   8}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{4}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{}}}\\
+	\texttt{Sum: 28}
+\end{flushleft}
+
+
+\subsection*{Q5 – Solution}
+\inputminted{python}{Files/5/5.py}
+
+
+
+
 	
 
 

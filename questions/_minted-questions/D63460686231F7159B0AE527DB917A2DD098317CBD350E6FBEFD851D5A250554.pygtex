@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{n}{mylist} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Wir\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}müssen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}uns\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Sisyphos\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}als\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}einen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}glücklichen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Menschen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}vorstellen\PYGZsq{}}\PYG{p}{]}
+	\PYG{n}{mystring} \PYG{o}{=} \PYG{n}{myJoin}\PYG{p}{(}\PYG{n}{mylist}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZsq{}}\PYG{p}{)}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{mystring}\PYG{p}{)}
+\end{Verbatim}

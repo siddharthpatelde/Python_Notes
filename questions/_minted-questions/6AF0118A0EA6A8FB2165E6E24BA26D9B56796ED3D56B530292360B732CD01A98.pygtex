@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{myJoin}\PYG{p}{(}\PYG{n}{lst}\PYG{p}{,} \PYG{n}{sep}\PYG{p}{):}
+    \PYG{n}{result} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{lst}\PYG{p}{)):}
+        \PYG{n}{result} \PYG{o}{+=} \PYG{n}{lst}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+        \PYG{k}{if} \PYG{n}{i} \PYG{o}{!=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{lst}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{:}
+            \PYG{n}{result} \PYG{o}{+=} \PYG{n}{sep}
+    \PYG{k}{return} \PYG{n}{result}
+
+\PYG{n}{mylist} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Wir\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}müssen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}uns\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Sisyphos\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}als\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}einen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}glücklichen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Menschen\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}vorstellen\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{mystring} \PYG{o}{=} \PYG{n}{myJoin}\PYG{p}{(}\PYG{n}{mylist}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{mystring}\PYG{p}{)}
+\end{Verbatim}
