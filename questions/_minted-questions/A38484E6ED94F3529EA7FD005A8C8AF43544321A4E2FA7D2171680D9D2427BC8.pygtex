@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Rectangle}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{a} \PYG{o}{=} \PYG{n}{a}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{b} \PYG{o}{=} \PYG{n}{b}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{getArea}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{a} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{b}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{getPerimeter}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+m+mi}{2} \PYG{o}{*} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{a} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{b}\PYG{p}{)}
+
+
+\PYG{n}{r1} \PYG{o}{=} \PYG{n}{Rectangle}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{r2} \PYG{o}{=} \PYG{n}{Rectangle}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Rectangle 1 Area:\PYGZdq{}}\PYG{p}{,} \PYG{n}{r1}\PYG{o}{.}\PYG{n}{getArea}\PYG{p}{())}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Rectangle 1 Perimeter:\PYGZdq{}}\PYG{p}{,} \PYG{n}{r1}\PYG{o}{.}\PYG{n}{getPerimeter}\PYG{p}{())}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Rectangle 2 Area:\PYGZdq{}}\PYG{p}{,} \PYG{n}{r2}\PYG{o}{.}\PYG{n}{getArea}\PYG{p}{())}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Rectangle 2 Perimeter:\PYGZdq{}}\PYG{p}{,} \PYG{n}{r2}\PYG{o}{.}\PYG{n}{getPerimeter}\PYG{p}{())}
+\end{Verbatim}

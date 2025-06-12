@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Q1: Squares up to N using list comprehension}
+\PYG{n}{N} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}N = \PYGZdq{}}\PYG{p}{))}
+\PYG{n}{squares} \PYG{o}{=} \PYG{p}{[}\PYG{n}{i}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{N}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{squares}\PYG{p}{)}
+\end{Verbatim}

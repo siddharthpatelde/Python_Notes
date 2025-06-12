@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Q4: Capitalized words in a sentence}
+\PYG{n}{sentence} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Eingabe: \PYGZdq{}}\PYG{p}{)}
+\PYG{n}{words} \PYG{o}{=} \PYG{n}{sentence}\PYG{o}{.}\PYG{n}{split}\PYG{p}{()}
+\PYG{n}{capitalized} \PYG{o}{=} \PYG{p}{[}\PYG{n}{word} \PYG{k}{for} \PYG{n}{word} \PYG{o+ow}{in} \PYG{n}{words} \PYG{k}{if} \PYG{n}{word}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{.}\PYG{n}{isupper}\PYG{p}{()]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{capitalized}\PYG{p}{)}
+\end{Verbatim}

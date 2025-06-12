@@ -7,3 +7,5 @@
 \contentsline {section}{\numberline {7}Lists and Tuples – Access, Operations, and Manual Algorithms}{17}{section.7}%
 \contentsline {section}{\numberline {8}Dictionaries – Key-Value Data Storage and Access}{19}{section.8}%
 \contentsline {section}{\numberline {9}Sets – Unique Collections and Set Operations}{21}{section.9}%
+\contentsline {section}{\numberline {10}Classes and Objects – OOP with Methods, Attributes, and Inheritance}{24}{section.10}%
+\contentsline {section}{\numberline {11}Comprehensions – Lists, Dictionaries, and Sets in One Line}{27}{section.11}%

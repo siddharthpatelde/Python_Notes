@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Q5: Invert the tab dictionary using a dictionary comprehension}
+\PYG{n}{tab} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+    \PYG{l+s+s1}{\PYGZsq{}Montag\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Monday\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}Dienstag\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Tuesday\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}Mittwoch\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Wednesday\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}Donnerstag\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Thursday\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}Freitag\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Friday\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}Samstag\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Saturday\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}Sonntag\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Sunday\PYGZsq{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} Invert key and value}
+\PYG{n}{tab} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{value}\PYG{p}{:} \PYG{n}{key} \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value} \PYG{o+ow}{in} \PYG{n}{tab}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tab}\PYG{p}{)}
+\end{Verbatim}

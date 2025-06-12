@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Q3: Numbers from 1 to N not divisible by 3}
+\PYG{n}{N} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}N = \PYGZdq{}}\PYG{p}{))}
+\PYG{n}{filtered} \PYG{o}{=} \PYG{p}{[}\PYG{n}{i} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{N}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{k}{if} \PYG{n}{i} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{3} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{filtered}\PYG{p}{)}
+\end{Verbatim}

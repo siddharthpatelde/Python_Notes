@@ -766,6 +766,208 @@ Now compute the difference of the two sets: words that are in the first sentence
 \subsection*{Q5 – Solution}
 \inputminted{python}{Files/9/5.py}
 
+\section{Classes and Objects – OOP with Methods, Attributes, and Inheritance}
+
+\subsection*{Q1: Rectangle Class – Area and Perimeter}
+Write a class \texttt{Rectangle} with two attributes \texttt{a} and \texttt{b} (side lengths). The constructor should initialize both attributes. Add methods \texttt{getArea()} and \texttt{getPerimeter()} that return the area and perimeter.
+
+Add a main program that creates two rectangles with dimensions 2×3 and 4×7. Output should be:
+
+\textbf{Expected Output:}
+\begin{flushleft}
+	\texttt{Rectangle 1 Area: 6.0}\\
+	\texttt{Rectangle 1 Perimeter: 10.0}\\
+	\texttt{Rectangle 2 Area: 28.0}\\
+	\texttt{Rectangle 2 Perimeter: 22.0}
+\end{flushleft}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/10/1.py}
+
+\subsection*{Q2: Circle Class – Radius and Area (with private attribute)}
+Write a class \texttt{Circle} with a private attribute \texttt{\_r}. Include:
+
+\begin{itemize}
+	\item \texttt{getR()} – returns radius
+	\item \texttt{setR(r)} – sets a new radius
+	\item \texttt{getArea()} – returns area using $\pi = 3.14$
+\end{itemize}
+
+In the main program, create two circles with radii 3 and 4. Print radius and area. Then update circle1’s radius to 10 and print again.
+
+\textbf{Expected Output:}
+\begin{flushleft}
+	\texttt{Circle 1: r = 3, A = 28.26}\\
+	\texttt{Circle 2: r = 4, A = 50.24}\\
+	\texttt{Circle 1: r = 10, A = 314.0}
+\end{flushleft}
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/10/2.py}
+
+\subsection*{Q3: Triangle Class with Magic Method}
+Create a class \texttt{Triangle} with private attributes \texttt{\_c} (base) and \texttt{\_h} (height). Include:
+
+\begin{itemize}
+	\item Constructor to initialize both
+	\item \texttt{getArea()} method for triangle area
+	\item \texttt{\_\_str\_\_()} magic method to support \texttt{print(triangle)} with formatted output
+\end{itemize}
+
+\textbf{Main program:}
+\begin{minted}{python}
+	tri = Triangle(4, 5)
+	print(tri)
+\end{minted}
+
+\textbf{Expected Output:}\\
+\texttt{Base: 4, Height: 5, Area: 10}
+
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/10/3.py}
+
+\subsection*{Q4: Inheritance – Tank, Cylinder, and Cuboid}
+Write a base class \texttt{Tank} with private attributes:
+
+\begin{itemize}
+	\item \texttt{\_A} – area of the base
+	\item \texttt{\_h} – height
+\end{itemize}
+
+Include:
+\begin{itemize}
+	\item \texttt{getVolume()} – returns \texttt{A × h}
+	\item \texttt{getArea()} – returns \texttt{A}
+\end{itemize}
+
+Now define two subclasses:
+- \texttt{Cilinder(r, h)}: calculates and passes $\pi r^2$ as base area; implements \texttt{getR()} using $\sqrt{A/\pi}$
+- \texttt{Quarder(a, h)}: calculates and passes $a^2$ as base area; implements \texttt{getA()} using $\sqrt{A}$
+
+\textbf{Main program:}
+Create a \texttt{Cilinder} with \texttt{r = 1, h = 2} and a \texttt{Quarder} with \texttt{a = 3, h = 4}. Output:
+
+\textbf{Expected Output:}
+\begin{flushleft}
+	\texttt{Cilinder: r = 1.0, Volume = 6.28}\\
+	\texttt{Quarder: a = 3.0, Volume = 36.0}
+\end{flushleft}
+
+
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/10/4.py}
+
+
+\section{Comprehensions – Lists, Dictionaries, and Sets in One Line}
+
+\subsection*{Q1: List of Squares up to N}
+Prompt the user to enter a number \texttt{N}. Use a list comprehension to generate a list of square numbers from 0 to \texttt{N}.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{N = \textcolor{blue}{\textit{5}}}\\
+	\texttt{[0, 1, 4, 9, 16, 25]}
+\end{flushleft}
+
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/11/1.py}
+
+\subsection*{Q2: Range with Step Using Comprehension}
+Prompt the user for \texttt{start} and \texttt{end}. Create a list from \texttt{start} to \texttt{end} (inclusive) with step 2 using a comprehension.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{start = \textcolor{blue}{\textit{4}}}\\
+	\texttt{end = \textcolor{blue}{\textit{10}}}\\
+	\texttt{[4, 6, 8, 10]}
+\end{flushleft}
+
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/11/2.py}
+
+
+\subsection*{Q3: Numbers Not Divisible by 3}
+Prompt the user for \texttt{N}. Create a list from 1 to \texttt{N} that excludes numbers divisible by 3.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{N = \textcolor{blue}{\textit{10}}}\\
+	\texttt{[1, 2, 4, 5, 7, 8, 10]}
+\end{flushleft}
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/11/3.py}
+
+\subsection*{Q4: Capitalized Words in a Sentence}
+Ask the user to input a sentence. Use a list comprehension to extract only words that start with an uppercase letter.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{In einem rechtwinkligen Dreieck ist die Summe der Kathetenquadrate gleich dem Quadrat der Hypotenuse}}}\\
+	\texttt{['In', 'Dreieck', 'Summe', 'Kathetenquadrate', 'Quadrat', 'Hypotenuse']}
+\end{flushleft}
+
+\subsection*{Q4 – Solution}
+\inputminted{python}{Files/11/4.py}
+
+\subsection*{Q5: Invert Dictionary with Comprehension}
+Given the dictionary:
+
+\begin{minted}{python}
+	tab = {'Montag': 'Monday', 'Dienstag': 'Tuesday', 'Mittwoch': 'Wednesday',
+		'Donnerstag': 'Thursday', 'Freitag': 'Friday', 'Samstag': 'Saturday',
+		'Sonntag': 'Sunday'}
+\end{minted}
+
+Use a comprehension to create a new dictionary where keys and values are swapped.
+
+\textbf{Expected Output:}
+\begin{flushleft}
+	\texttt{\{'Monday': 'Montag', 'Tuesday': 'Dienstag', ...\}}
+\end{flushleft}
+
+\subsection*{Q5 – Solution}
+\inputminted{python}{Files/11/5.py}
+
+\subsection*{Q6: Filter Even Month Numbers}
+Given the dictionary:
+
+\begin{minted}{python}
+	tab = {'Jan': '1', 'Feb': '2', 'Mär': '3', 'Apr': '4', 'Mai': '5',
+		'Jun': '6', 'Jul': '7', 'Aug': '8', 'Sep': '9', 'Okt': '10',
+		'Nov': '11', 'Dez': '12'}
+\end{minted}
+
+Create a new dictionary using comprehension that includes only months with even numbers (converted to \texttt{int}).
+
+\subsection*{Q6 – Solution}
+\inputminted{python}{Files/11/6.py}
+
+\textbf{Expected Output:}
+\begin{flushleft}
+	\texttt{\{'Feb': 2, 'Apr': 4, 'Jun': 6, 'Aug': 8, 'Okt': 10, 'Dez': 12\}}
+\end{flushleft}
+
+\subsection*{Q7: Set Comprehension from User Input}
+Use a set comprehension to prompt the user five times for input. Store all unique values in a set. The full program should be no more than 2 lines.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{Input: \textcolor{blue}{\textit{hallo}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{welt}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{hallo}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{berlin}}}\\
+	\texttt{Input: \textcolor{blue}{\textit{hallo}}}\\
+	\texttt{\{'hallo', 'welt', 'berlin'\}}
+\end{flushleft}
+
+\subsection*{Q7 – Solution}
+\inputminted{python}{Files/11/7.py}
+
+
 
 	
 	

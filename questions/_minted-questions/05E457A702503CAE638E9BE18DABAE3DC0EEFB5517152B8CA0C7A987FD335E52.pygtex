@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Circle}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{r}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}r} \PYG{o}{=} \PYG{n}{r}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{getR}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}r}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{setR}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{r}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}r} \PYG{o}{=} \PYG{n}{r}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{getArea}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+m+mf}{3.14} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}r} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}r}
+
+
+\PYG{n}{circle1} \PYG{o}{=} \PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{circle2} \PYG{o}{=} \PYG{n}{Circle}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Circle 1: r = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{circle1}\PYG{o}{.}\PYG{n}{getR}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, A = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{circle1}\PYG{o}{.}\PYG{n}{getArea}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Circle 2: r = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{circle2}\PYG{o}{.}\PYG{n}{getR}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, A = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{circle2}\PYG{o}{.}\PYG{n}{getArea}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{circle1}\PYG{o}{.}\PYG{n}{setR}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Circle 1: r = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{circle1}\PYG{o}{.}\PYG{n}{getR}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, A = }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{circle1}\PYG{o}{.}\PYG{n}{getArea}\PYG{p}{()}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
