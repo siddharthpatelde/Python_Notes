@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{month} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()}
+
+\PYG{k}{match} \PYG{n}{month}\PYG{p}{:}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}mar\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}apr\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}may\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Spring\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}jun\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}jul\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}aug\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Summer\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}sep\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}oct\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}nov\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Autumn\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}dec\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}jan\PYGZdq{}} \PYG{o}{|} \PYG{l+s+s2}{\PYGZdq{}feb\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Winter\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case}\PYG{+w}{ }\PYG{k}{\PYGZus{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Error\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+		\PYG{n}{val} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Value: \PYGZsq{}}\PYG{p}{))}
+		\PYG{k}{if} \PYG{n}{val} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o+ow}{and} \PYG{n}{val} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{:}
+		\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Small number\PYGZsq{}}\PYG{p}{)}
+		\PYG{k}{elif} \PYG{n}{val} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{6}\PYG{p}{:}
+		\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Medium number\PYGZsq{}}\PYG{p}{)}
+		\PYG{k}{elif} \PYG{n}{val} \PYG{o}{==} \PYG{l+m+mi}{7} \PYG{o+ow}{or} \PYG{n}{val} \PYG{o}{==} \PYG{l+m+mi}{9}\PYG{p}{:}
+		\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Special number\PYGZsq{}}\PYG{p}{)}
+		\PYG{k}{else}\PYG{p}{:}
+		\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Some other number\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

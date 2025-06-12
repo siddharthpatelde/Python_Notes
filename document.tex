@@ -462,7 +462,72 @@
 	\bottomrule
 \end{tabular}
 
+\vspace{1em}
+\subsection*{Set Operations – Visual Explanation}
+
+\renewcommand{\arraystretch}{1.8}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{3.2cm} >{\centering\arraybackslash}p{3.5cm} p{6cm} >{\centering\arraybackslash}p{2.5cm}}
+	\toprule
+	Set Operation & Diagram & Explanation & \ttfamily In Python \\
+	\midrule
 	
+	Union &
+	\vspace{0.4em}\includegraphics[width=2.8cm]{images/1.png} &
+	$A \cup B$ is the set of all elements that are a member of $A$, or $B$, or both. &
+	union() \\
+	
+	Intersection &
+	\vspace{0.4em}\includegraphics[width=2.8cm]{images/2.png} &
+	$A \cap B$ is the set of all elements that are a member of both $A$ and $B$. &
+	intersection() \\
+	
+	Difference &
+	\vspace{0.4em}\includegraphics[width=2.8cm]{images/3.png} &
+	$A \setminus B$ is the set of all elements of $A$ that are not in $B$. &
+	difference() \\
+	
+	Symmetric Difference &
+	\vspace{0.4em}\includegraphics[width=2.8cm]{images/4.png} &
+	$A \Delta B$ is the set of elements in either $A$ or $B$, but not both. &
+	\shortstack{\\symmetric\\\_difference()} \\
+	
+	\bottomrule
+\end{tabular}
+
+\section{Lesson 16: Dictionary}
+\inputminted{python}{Python_Files/dict_basics_guid.py}
+
+
+\section{Lesson 17: Dictionary – Most Important Methods}
+\inputminted{python}{Python_Files/dict_methods_guid.py}
+
+\inputminted{python}{Python_Files/dict_key_value_item_get_examples.py}
+
+\vspace{1em}
+\subsection*{Common Dictionary Methods – Reference Table}
+
+\rowcolors{2}{gray!10}{white}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\bfseries}p{4cm} p{6.5cm} p{2.8cm}}
+	\toprule
+	Method & Description & Return Type \\
+	\midrule
+	
+	\texttt{get(key, default)} & Returns value if key exists, else default or None & Value or None \\
+	\texttt{keys()} & Returns all keys in the dictionary & dict\_keys view \\
+	\texttt{values()} & Returns all values in the dictionary & dict\_values view \\
+	\texttt{items()} & Returns key-value pairs as tuples & dict\_items view \\
+	\texttt{pop(key)} & Removes and returns value for given key & Value \\
+	\texttt{popitem()} & Removes and returns the last key-value pair & (key, value) tuple \\
+	\texttt{update(dict)} & Updates dict with another dict or key-value pairs & None \\
+	\texttt{clear()} & Removes all items from the dictionary & None \\
+	\texttt{copy()} & Returns a shallow copy of the dictionary & New dict \\
+	
+	\bottomrule
+\end{tabular}
+
+
 	
 	
 	

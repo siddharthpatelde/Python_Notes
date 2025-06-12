@@ -1,0 +1,335 @@
+\documentclass[a4paper,11pt]{article}
+
+% ───────────────────────────
+%         PACKAGES
+% ───────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\usepackage{minted}
+\usepackage{inconsolata}  % clean monospaced font
+\usepackage{mathpazo}     % professional text font
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+
+
+% ───────────────────────────
+%         GEOMETRY
+% ───────────────────────────
+\geometry{
+	a4paper,
+	left=2.5cm,
+	right=2.5cm,
+	top=2.5cm,
+	bottom=2.5cm
+}
+
+% ───────────────────────────
+%         HEADER/FOOTER
+% ───────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lhead{\textsf{\textcolor{gray}{Python Notes}}}
+\rhead{\textsf{\textcolor{gray}{Siddharth Patel}}}
+\rfoot{\textsf{\textcolor{gray}{\thepage}}}
+
+% ───────────────────────────
+%         TITLE FORMAT
+% ───────────────────────────
+\titleformat{\section}
+{\Large\bfseries\sffamily\color{black}}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\large\bfseries\sffamily\color{black}}
+{\thesubsection}{1em}{}
+
+% ───────────────────────────
+%         MINTED SETTINGS
+% ───────────────────────────
+\definecolor{mintbg}{rgb}{0.97,0.97,0.97}
+\setminted{
+	bgcolor=mintbg,
+	fontsize=\footnotesize,
+	linenos=true,
+	numbersep=5pt,
+	frame=lines,
+	framesep=2mm,
+	breaklines=true,
+	tabsize=4,
+	encoding=utf8
+}
+
+
+
+% ───────────────────────────
+%         TITLE PAGE
+% ───────────────────────────
+\title{\Huge \textbf{My Python Course Notes}\\[1ex]
+	\Large Structured Revision for Every Lesson}
+\author{\textbf{Siddharth Patel} \\ HTW Berlin}
+\date{\today}
+
+% ───────────────────────────
+%         BEGIN DOCUMENT
+% ───────────────────────────
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	\section{If Else – Decision Making in Python}
+	
+	\subsection*{Q1: Greeting by First Name}
+	Write a program that asks the user for their first name. If the user's name is \texttt{Marie} or \texttt{Otto}, the program should print \texttt{Hello Marie!} or \texttt{Hello Otto!} respectively. Otherwise, nothing should be printed. Leading and trailing spaces should be ignored. The input and output must match the following examples exactly.
+	
+	\textbf{Example 1:}\\
+	\texttt{First name: \textcolor{blue}{\textit{Marie}}}\\
+	\texttt{Hello Marie!}
+	
+	\textbf{Example 2:}\\
+	\texttt{First name: \textcolor{blue}{\textit{Karl}}}\\
+	(No output expected)
+	
+		\subsection*{Q1 – Solution}
+		\inputminted{python}{Files/1/1.py}
+	
+	\subsection*{Q2: Compare Two Floating-Point Numbers}
+	Write a program that asks the user to input two floating-point numbers, \texttt{a} and \texttt{b}. Use an \texttt{if-else} statement to determine and print the larger number.
+	
+	\textbf{Example:}\\
+	\texttt{a = \textcolor{blue}{\textit{10}}}\\
+	\texttt{b = \textcolor{blue}{\textit{11.2}}}\\
+	\texttt{The larger number is: 11.2}
+	
+		
+	\subsection*{Q2 – Solution}
+		\inputminted{python}{Files/1/2.py}
+	
+	\subsection*{Q3: Compare with a Single if Statement}
+	Solve the previous task again, but this time using only a single \texttt{if} statement without \texttt{else}. The input and output must match the example exactly.
+	
+	\textbf{Example:}\\
+	\texttt{a = \textcolor{blue}{\textit{10}}}\\
+	\texttt{b = \textcolor{blue}{\textit{11.2}}}\\
+	\texttt{The larger number is: 11.2}
+	
+		\subsection*{Q3 – Solution}
+	\inputminted{python}{Files/1/3.py}
+	
+	
+	\subsection*{Q4: Largest of Three Numbers}
+	Write a program that asks the user to input three floating-point numbers: \texttt{a}, \texttt{b}, and \texttt{c}. Then determine and print the largest number.
+	
+	\textbf{Example:}\\
+	\texttt{a = \textcolor{blue}{\textit{10}}}\\
+	\texttt{b = \textcolor{blue}{\textit{11.2}}}\\
+	\texttt{c = \textcolor{blue}{\textit{-12.31}}}\\
+	\texttt{The largest number is: 11.2}
+	
+		\subsection*{Q4 – Solution}
+		\inputminted{python}{Files/1/4.py}
+	
+	\subsection*{Q5: Age-Based Classification (if-elif-else)}
+	Write a program that asks the user for their age and prints a message based on the following rules:
+	
+	\begin{itemize}
+		\item Under 18: \texttt{You are a minor.}
+		\item Between 18 and 65: \texttt{You are an adult.}
+		\item 66 and older: \texttt{You are of retirement age.}
+	\end{itemize}
+	
+	\textbf{Example 1:}\\
+	\texttt{Please enter your age: \textcolor{blue}{\textit{23}}}\\
+	\texttt{You are an adult.}
+	
+	\textbf{Example 2:}\\
+	\texttt{Please enter your age: \textcolor{blue}{\textit{13}}}\\
+	\texttt{You are a minor.}
+	
+		
+	\subsection*{Q5 – Solution}
+		\inputminted{python}{Files/1/5.py}
+	
+	\subsection*{Q6: Age-Based Classification with Extended Range}
+	Write a program similar to Q5 but with the following additional condition:
+	
+	\begin{itemize}
+		\item Under 18: \texttt{You are a minor.}
+		\item Between 18 and 65: \texttt{You are an adult.}
+		\item Between 66 and 99: \texttt{You are of retirement age.}
+		\item 100 or older: \texttt{You are in the Methuselah age group.}
+	\end{itemize}
+	
+	\textbf{Example:}\\
+	\texttt{Please enter your age: \textcolor{blue}{\textit{101}}}\\
+	\texttt{You are in the Methuselah age group.}
+	
+		
+	\subsection*{Q6 – Solution}
+		\inputminted{python}{Files/1/6.py}
+	
+	\subsection*{Q7: Min and Max from Input Without Using min/max}
+	Write a program that asks the user to enter a list of integers separated by commas. Then determine and print the smallest and largest number without using the built-in \texttt{min()} or \texttt{max()} functions.
+	
+	\textbf{Example:}\\
+	\texttt{Enter numbers: \textcolor{blue}{\textit{1, 3, 7, -4, 9, 0, 2}}}\\
+	\texttt{Smallest number: -4}\\
+	\texttt{Largest number: 9}
+	
+		
+	\subsection*{Q7 – Solution}
+		\inputminted{python}{Files/1/7.py}
+		
+	\section{Match Statement – Pattern Matching in Python}
+	
+	\subsection*{Q1: Weekday Abbreviation to Full Name}
+	Write a program that asks the user to input a weekday abbreviation (2 letters), such as \texttt{Mo}, \texttt{Di}, \texttt{Mi}, etc. The program should return the full weekday name. If the input is invalid, print \texttt{Error}. Use a \texttt{match} statement to solve this.
+	
+	\textbf{Example 1:}\\
+	\texttt{Input: \textcolor{blue}{\textit{Mo}}}\\
+	\texttt{Monday}
+	
+	\textbf{Example 2:}\\
+	\texttt{Input: \textcolor{blue}{\textit{Mon}}}\\
+	\texttt{Error}
+	
+		\subsection*{Q1 – Solution}
+	\inputminted{python}{Files/2/1.py}
+	
+	\subsection*{Q2: Month Abbreviation to Season}
+	Write a program that asks the user to enter a three-letter month abbreviation (e.g., \texttt{Jan}, \texttt{Feb}). The input should be case-insensitive. The program should return the corresponding season:
+	
+	\begin{itemize}
+		\item Spring: Mar–May
+		\item Summer: Jun–Aug
+		\item Autumn: Sep–Nov
+		\item Winter: Dec–Feb
+	\end{itemize}
+	
+	Invalid input should return \texttt{Error}. Use a \texttt{match} statement with as few \texttt{case} blocks as possible (5 total).
+	
+	\textbf{Example:}\\
+	\texttt{Input: \textcolor{blue}{\textit{Feb}}}\\
+	\texttt{Winter}
+	
+		\subsection*{Q2 – Solution}
+	\inputminted{python}{Files/2/2.py}
+	
+	
+	\subsection*{Q3: Rewrite if-elif-else Using match}
+	Given the following code:
+	
+	\begin{minted}{python}
+		val = int(input('Value: '))
+		if val >= 0 and val < 4:
+		print('Small number')
+		elif val < 6:
+		print('Medium number')
+		elif val == 7 or val == 9:
+		print('Special number')
+		else:
+		print('Some other number')
+	\end{minted}
+	
+	Rewrite the program using a \texttt{match} statement instead of \texttt{if-elif-else} to achieve the same logic and output.
+	
+
+	\subsection*{Q3 – Solution}
+	\inputminted{python}{Files/2/3.py}
+	
+	
+	\section{The \texttt{for} Loop – Counting, Iteration, and Containers}
+	
+	\subsection*{Q1: Count from 1 to a User-Defined Value}
+	Write a program that asks the user to input a number. Then use a \texttt{for} loop to print all numbers from 1 to the entered value.
+	
+	\textbf{Example:}\\
+	\texttt{Last count value: \textcolor{blue}{\textit{4}}}\\
+	\texttt{1\\2\\3\\4}
+	
+		\subsection*{Q1 – Solution}
+	\inputminted{python}{Files/3/1.py}
+	
+	
+	\subsection*{Q2: Count Down to 1}
+	Repeat the previous task, but count down from the input value to 1, using a step of -1.
+	
+	\textbf{Example:}\\
+	\texttt{Last count value: \textcolor{blue}{\textit{4}}}\\
+	\texttt{4\\3\\2\\1}
+	
+	
+	\subsection*{Q2 – Solution}
+	\inputminted{python}{Files/3/2.py}
+	
+	\subsection*{Q3: Factorial with a \texttt{for} Loop}
+	Write a program that calculates the factorial of a user-given number \texttt{n}. Use a \texttt{for} loop starting at 1.
+	
+	\textbf{Example:}\\
+	\texttt{Please enter n: \textcolor{blue}{\textit{4}}}\\
+	\texttt{n! = 24}
+	
+		
+	\subsection*{Q3 – Solution}
+	\inputminted{python}{Files/3/3.py}
+	
+	\subsection*{Q4: Count Occurrences of a Character in a String}
+	Write a program that asks the user for a string and counts how many times the letter \texttt{e} appears using a \texttt{for} loop.
+	
+	\textbf{Example:}\\
+	\texttt{Input: \textcolor{blue}{\textit{Das Leben ist schoen!}}}\\
+	\texttt{Number of e: 3}
+	
+		
+	\subsection*{Q4 – Solution}
+	\inputminted{python}{Files/3/4.py}
+	
+	\subsection*{Q5: Sum All Elements in a List}
+	Given the list:
+	
+	\texttt{intlist = [1, 4, 3, 7, -5, 3, 5]}
+	
+	Write a program that uses a \texttt{for} loop to sum all elements and print the result.
+	
+	\textbf{Output:}\\
+	\texttt{Sum: 18}
+	
+
+	
+	\subsection*{Q5 – Solution}
+	\inputminted{python}{Files/3/5.py}
+	
+		
+	
+
+
+	
+
+
+
+
+
+	
+	
+\end{document}
+

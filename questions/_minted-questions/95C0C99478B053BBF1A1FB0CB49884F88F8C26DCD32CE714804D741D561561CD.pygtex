@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{day} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Input: \PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+
+\PYG{k}{match} \PYG{n}{day}\PYG{p}{:}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}Mo\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Monday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}Di\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Tuesday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}Mi\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Wednesday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}Do\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Thursday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}Fr\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Friday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}Sa\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Saturday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+s+s2}{\PYGZdq{}So\PYGZdq{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Sunday\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case}\PYG{+w}{ }\PYG{k}{\PYGZus{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Error\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

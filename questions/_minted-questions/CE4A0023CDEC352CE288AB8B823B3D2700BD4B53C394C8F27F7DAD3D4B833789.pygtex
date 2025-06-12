@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{a} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}a = \PYGZdq{}}\PYG{p}{))}
+\PYG{n}{b} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}b = \PYGZdq{}}\PYG{p}{))}
+\PYG{n}{c} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}c = \PYGZdq{}}\PYG{p}{))}
+
+\PYG{k}{if} \PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{n}{b} \PYG{o+ow}{and} \PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{n}{c}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}The largest number is:\PYGZdq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{b} \PYG{o}{\PYGZgt{}=} \PYG{n}{a} \PYG{o+ow}{and} \PYG{n}{b} \PYG{o}{\PYGZgt{}=} \PYG{n}{c}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}The largest number is:\PYGZdq{}}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}The largest number is:\PYGZdq{}}\PYG{p}{,} \PYG{n}{c}\PYG{p}{)}
+\end{Verbatim}

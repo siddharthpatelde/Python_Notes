@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{raw\PYGZus{}input} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Enter numbers: \PYGZdq{}}\PYG{p}{)}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{p}{[}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{())} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{raw\PYGZus{}input}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{},\PYGZdq{}}\PYG{p}{)]}
+
+\PYG{n}{smallest} \PYG{o}{=} \PYG{n}{numbers}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{largest} \PYG{o}{=} \PYG{n}{numbers}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+
+\PYG{k}{for} \PYG{n}{num} \PYG{o+ow}{in} \PYG{n}{numbers}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{:]:}
+    \PYG{k}{if} \PYG{n}{num} \PYG{o}{\PYGZlt{}} \PYG{n}{smallest}\PYG{p}{:}
+        \PYG{n}{smallest} \PYG{o}{=} \PYG{n}{num}
+    \PYG{k}{if} \PYG{n}{num} \PYG{o}{\PYGZgt{}} \PYG{n}{largest}\PYG{p}{:}
+        \PYG{n}{largest} \PYG{o}{=} \PYG{n}{num}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Smallest number:\PYGZdq{}}\PYG{p}{,} \PYG{n}{smallest}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Largest number:\PYGZdq{}}\PYG{p}{,} \PYG{n}{largest}\PYG{p}{)}
+\end{Verbatim}

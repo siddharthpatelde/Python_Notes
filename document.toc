@@ -13,3 +13,5 @@
 \contentsline {section}{\numberline {13}Lesson 13: Tuples – Full Usage Guide}{19}{section.13}%
 \contentsline {section}{\numberline {14}Lesson 14: Sets – General Usage Guide}{20}{section.14}%
 \contentsline {section}{\numberline {15}Lesson 15: Sets – Mathematical Operations}{22}{section.15}%
+\contentsline {section}{\numberline {16}Lesson 16: Dictionary}{24}{section.16}%
+\contentsline {section}{\numberline {17}Lesson 17: Dictionary – Most Important Methods}{25}{section.17}%

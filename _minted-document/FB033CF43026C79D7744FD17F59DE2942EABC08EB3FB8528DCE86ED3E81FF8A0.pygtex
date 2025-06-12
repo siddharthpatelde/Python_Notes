@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} DICTIONARIES – BASIC USAGE GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} 1. What is a dictionary?}
+\PYG{c+c1}{\PYGZsh{} → A dictionary is a collection of key\PYGZhy{}value pairs.}
+\PYG{c+c1}{\PYGZsh{} → Each key must be unique, and values can be of any type.}
+
+\PYG{c+c1}{\PYGZsh{} Unlike lists or tuples (which store values), dictionaries store data like a \PYGZdq{}map\PYGZdq{}:}
+\PYG{c+c1}{\PYGZsh{}   Key   →   Value}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 2. Creating dictionaries}
+
+\PYG{c+c1}{\PYGZsh{} Method 1: Using curly braces}
+\PYG{n}{student} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+    \PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Alice\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}age\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{21}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}major\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Computer Science\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} Method 2: Using dict() constructor}
+\PYG{n}{profile} \PYG{o}{=} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Bob\PYGZdq{}}\PYG{p}{,} \PYG{n}{age}\PYG{o}{=}\PYG{l+m+mi}{25}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Created with dict():\PYGZdq{}}\PYG{p}{,} \PYG{n}{profile}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 3. Accessing values}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Name:\PYGZdq{}}\PYG{p}{,} \PYG{n}{student}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{])}  \PYG{c+c1}{\PYGZsh{} Alice}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Age:\PYGZdq{}}\PYG{p}{,} \PYG{n}{student}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}age\PYGZdq{}}\PYG{p}{])}    \PYG{c+c1}{\PYGZsh{} 21}
+
+\PYG{c+c1}{\PYGZsh{} If key doesn\PYGZsq{}t exist, it raises a KeyError}
+\PYG{c+c1}{\PYGZsh{} print(student[\PYGZdq{}grade\PYGZdq{}])  \PYGZsh{} KeyError}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 4. Adding new key\PYGZhy{}value pairs}
+
+\PYG{n}{student}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}grade\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}A\PYGZdq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Updated student:\PYGZdq{}}\PYG{p}{,} \PYG{n}{student}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 5. Iterating over a dictionary (keys by default)}
+
+\PYG{k}{for} \PYG{n}{key} \PYG{o+ow}{in} \PYG{n}{student}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Key:\PYGZdq{}}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}| Value:\PYGZdq{}}\PYG{p}{,} \PYG{n}{student}\PYG{p}{[}\PYG{n}{key}\PYG{p}{])}
+\end{Verbatim}

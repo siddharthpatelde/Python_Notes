@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{val} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Value: \PYGZdq{}}\PYG{p}{))}
+
+\PYG{k}{match} \PYG{n}{val}\PYG{p}{:}
+    \PYG{k}{case} \PYG{l+m+mi}{0} \PYG{o}{|} \PYG{l+m+mi}{1} \PYG{o}{|} \PYG{l+m+mi}{2} \PYG{o}{|} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Small number\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+m+mi}{4} \PYG{o}{|} \PYG{l+m+mi}{5}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Medium number\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case} \PYG{l+m+mi}{7} \PYG{o}{|} \PYG{l+m+mi}{9}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Special number\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{case}\PYG{+w}{ }\PYG{k}{\PYGZus{}}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Some other number\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

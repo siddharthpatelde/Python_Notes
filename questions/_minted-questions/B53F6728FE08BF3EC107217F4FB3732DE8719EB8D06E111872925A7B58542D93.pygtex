@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{age} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Please enter your age: \PYGZdq{}}\PYG{p}{))}
+
+\PYG{k}{if} \PYG{n}{age} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{18}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You are a minor.\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{age} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{65}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You are an adult.\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{age} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{99}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You are of retirement age.\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}You are in the Methuselah age group.\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}
