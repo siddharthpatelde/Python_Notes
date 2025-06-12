@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} DICTIONARY \PYGZam{} SET COMPREHENSIONS – PYTHON GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} → Comprehensions allow building new dictionaries and sets in a single line.}
+\PYG{c+c1}{\PYGZsh{} → They use similar syntax to list comprehensions with minor differences.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} DICTIONARY COMPREHENSION}
+\PYG{c+c1}{\PYGZsh{} Syntax:}
+\PYG{c+c1}{\PYGZsh{} \PYGZob{}key\PYGZus{}expression: value\PYGZus{}expression for item in iterable if condition\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} Example: Square values in a dictionary only if value is even}
+\PYG{n}{numbers} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}d\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{squares} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{key}\PYG{p}{:} \PYG{n}{value}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value} \PYG{o+ow}{in} \PYG{n}{numbers}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()} \PYG{k}{if} \PYG{n}{value} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Squared Even Values:\PYGZdq{}}\PYG{p}{,} \PYG{n}{squares}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: \PYGZob{}\PYGZsq{}b\PYGZsq{}: 4, \PYGZsq{}d\PYGZsq{}: 16\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} SET COMPREHENSION}
+\PYG{c+c1}{\PYGZsh{} Syntax:}
+\PYG{c+c1}{\PYGZsh{} \PYGZob{}expression for item in iterable if condition\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} Example: Squaring all values in a set}
+\PYG{n}{nums} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{\PYGZcb{}}
+\PYG{n}{squared\PYGZus{}set} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{num}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{num} \PYG{o+ow}{in} \PYG{n}{nums}\PYG{p}{\PYGZcb{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Squared Set:\PYGZdq{}}\PYG{p}{,} \PYG{n}{squared\PYGZus{}set}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: \PYGZob{}0, 1, 4\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} LIST COMPREHENSIONS – PYTHON GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} → List comprehensions provide a concise way to create or transform lists.}
+\PYG{c+c1}{\PYGZsh{} → Syntax: [ expression for item in iterable if condition ]}
+\PYG{c+c1}{\PYGZsh{}}
+\PYG{c+c1}{\PYGZsh{} Parts:}
+\PYG{c+c1}{\PYGZsh{} expression → The output expression (what should be added to the new list)}
+\PYG{c+c1}{\PYGZsh{} item       → The looping variable}
+\PYG{c+c1}{\PYGZsh{} iterable   → Any iterable like range, list, tuple, etc.}
+\PYG{c+c1}{\PYGZsh{} condition  → (Optional) Only items satisfying this condition are included}
+
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 1. Squares of numbers from 1 to 10}
+\PYG{n}{squares} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{)]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Squares:\PYGZdq{}}\PYG{p}{,} \PYG{n}{squares}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 2. Filter odd squares from the above list}
+\PYG{n}{odd\PYGZus{}squares} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{squares} \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Odd Squares:\PYGZdq{}}\PYG{p}{,} \PYG{n}{odd\PYGZus{}squares}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: [1, 9, 25, 49, 81]}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 3. Filter words starting with \PYGZsq{}b\PYGZsq{}}
+\PYG{n}{words} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}apple\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}banana\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}cherry\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}durian\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}elderberry\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{b\PYGZus{}words} \PYG{o}{=} \PYG{p}{[}\PYG{n}{word} \PYG{k}{for} \PYG{n}{word} \PYG{o+ow}{in} \PYG{n}{words} \PYG{k}{if} \PYG{n}{word}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{)]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Words starting with \PYGZsq{}b\PYGZsq{}:\PYGZdq{}}\PYG{p}{,} \PYG{n}{b\PYGZus{}words}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: [\PYGZsq{}banana\PYGZsq{}]}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 4. Example without condition (copying elements)}
+\PYG{n}{copied} \PYG{o}{=} \PYG{p}{[}\PYG{n}{w} \PYG{k}{for} \PYG{n}{w} \PYG{o+ow}{in} \PYG{n}{words}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Copied:\PYGZdq{}}\PYG{p}{,} \PYG{n}{copied}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 5. Example with inline modification}
+\PYG{n}{uppercased} \PYG{o}{=} \PYG{p}{[}\PYG{n}{w}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()} \PYG{k}{for} \PYG{n}{w} \PYG{o+ow}{in} \PYG{n}{words}\PYG{p}{]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Uppercased:\PYGZdq{}}\PYG{p}{,} \PYG{n}{uppercased}\PYG{p}{)}
+\end{Verbatim}

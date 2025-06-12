@@ -1,0 +1,47 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} KLASSEN UND OBJEKTE – PYTHON GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} → A class is a blueprint or template for creating objects.}
+\PYG{c+c1}{\PYGZsh{} → An object is a concrete instance of a class with its own data and behavior.}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Example: A simple bank account class}
+
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Account}\PYG{p}{:}
+    \PYG{c+c1}{\PYGZsh{} The constructor method (\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}) is called when an object is created}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{number}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name} \PYG{o}{=} \PYG{n}{name}          \PYG{c+c1}{\PYGZsh{} Account holder}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{number} \PYG{o}{=} \PYG{n}{number}      \PYG{c+c1}{\PYGZsh{} Account number}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{=} \PYG{l+m+mi}{0}          \PYG{c+c1}{\PYGZsh{} Initial balance is 0}
+
+    \PYG{c+c1}{\PYGZsh{} Method to deposit money into the account}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{deposit}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{+=} \PYG{n}{amount}    \PYG{c+c1}{\PYGZsh{} Increase balance by the deposit amount}
+
+    \PYG{c+c1}{\PYGZsh{} Method to withdraw money from the account}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{withdraw}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{\PYGZlt{}} \PYG{n}{amount}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Insufficient funds\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{balance} \PYG{o}{\PYGZhy{}=} \PYG{n}{amount}    \PYG{c+c1}{\PYGZsh{} Decrease balance by the withdrawal amount}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Creating instances (objects) of the Account class}
+
+\PYG{n}{account1} \PYG{o}{=} \PYG{n}{Account}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Otto Schmidt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}123456789\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{account2} \PYG{o}{=} \PYG{n}{Account}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Luisa Meier\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}987654321\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Using object methods}
+\PYG{n}{account1}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{n}{account1}\PYG{o}{.}\PYG{n}{withdraw}\PYG{p}{(}\PYG{l+m+mi}{40}\PYG{p}{)}
+
+\PYG{n}{account2}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Accessing attributes}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Account 1 \PYGZhy{} Name:\PYGZdq{}}\PYG{p}{,} \PYG{n}{account1}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Account 1 \PYGZhy{} Balance:\PYGZdq{}}\PYG{p}{,} \PYG{n}{account1}\PYG{o}{.}\PYG{n}{balance}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Account 2 \PYGZhy{} Name:\PYGZdq{}}\PYG{p}{,} \PYG{n}{account2}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Account 2 \PYGZhy{} Balance:\PYGZdq{}}\PYG{p}{,} \PYG{n}{account2}\PYG{o}{.}\PYG{n}{balance}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} OBJEKTVERWENDUNG – KONTOBEISPIEL}
+
+\PYG{c+c1}{\PYGZsh{} → This example shows how to create and interact with objects}
+\PYG{c+c1}{\PYGZsh{} → Using methods defined inside the Account class}
+
+\PYG{c+c1}{\PYGZsh{} Assuming the class Account is already defined}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Creating objects from the class}
+
+\PYG{n}{account1} \PYG{o}{=} \PYG{n}{Account}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Otto Schmidt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}123456\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{account2} \PYG{o}{=} \PYG{n}{Account}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Luisa Meier\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}789012\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Depositing money}
+\PYG{n}{account1}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{1500}\PYG{p}{)}
+\PYG{n}{account2}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)}
+\PYG{n}{account2}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{800}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Withdrawing money (if enough balance)}
+\PYG{n}{account1}\PYG{o}{.}\PYG{n}{withdraw}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Account 1 Balance:\PYGZdq{}}\PYG{p}{,} \PYG{n}{account1}\PYG{o}{.}\PYG{n}{balance}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Output: 1000}
+
+\PYG{n}{account2}\PYG{o}{.}\PYG{n}{withdraw}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Account 2 Balance:\PYGZdq{}}\PYG{p}{,} \PYG{n}{account2}\PYG{o}{.}\PYG{n}{balance}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Output: 1100}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Note:}
+\PYG{c+c1}{\PYGZsh{} account1.balance refers to the attribute of a specific object}
+\PYG{c+c1}{\PYGZsh{} Inside the class, we use self.balance since self refers to the current instance}
+\end{Verbatim}

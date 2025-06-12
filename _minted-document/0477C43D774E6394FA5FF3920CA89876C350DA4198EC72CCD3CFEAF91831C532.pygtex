@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} TUPLE COMPREHENSIONS – PYTHON GUIDE}
+
+\PYG{c+c1}{\PYGZsh{} → Tuple comprehensions work just like list comprehensions,}
+\PYG{c+c1}{\PYGZsh{}   but use parentheses ( ) and the tuple() constructor.}
+\PYG{c+c1}{\PYGZsh{}}
+\PYG{c+c1}{\PYGZsh{} → Syntax:}
+\PYG{c+c1}{\PYGZsh{}   tuple\PYGZus{}result = tuple(expression for item in iterable if condition)}
+
+\PYG{c+c1}{\PYGZsh{} Note:}
+\PYG{c+c1}{\PYGZsh{} Although the syntax uses ( ), it does not create a tuple by default —}
+\PYG{c+c1}{\PYGZsh{} you must explicitly wrap the comprehension in the tuple() constructor.}
+
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 1. Tuple of squares (1 to 10)}
+\PYG{n}{squaretuples} \PYG{o}{=} \PYG{n+nb}{tuple}\PYG{p}{(}\PYG{n}{x}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Tuple of Squares:\PYGZdq{}}\PYG{p}{,} \PYG{n}{squaretuples}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: (1, 4, 9, 16, 25, 36, 49, 64, 81, 100)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 2. Filter odd numbers from existing list of squares}
+\PYG{n}{squares} \PYG{o}{=} \PYG{p}{[}\PYG{n}{x}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{)]}
+\PYG{n}{odd\PYGZus{}squaretuples} \PYG{o}{=} \PYG{n+nb}{tuple}\PYG{p}{(}\PYG{n}{x} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{squares} \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Odd Squares as Tuple:\PYGZdq{}}\PYG{p}{,} \PYG{n}{odd\PYGZus{}squaretuples}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: (1, 9, 25, 49, 81)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 3. Filter words starting with \PYGZsq{}b\PYGZsq{} from a tuple}
+\PYG{n}{words} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}apple\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}banana\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}cherry\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}durian\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}elderberry\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{b\PYGZus{}words} \PYG{o}{=} \PYG{n+nb}{tuple}\PYG{p}{(}\PYG{n}{word} \PYG{k}{for} \PYG{n}{word} \PYG{o+ow}{in} \PYG{n}{words} \PYG{k}{if} \PYG{n}{word}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Words starting with \PYGZsq{}b\PYGZsq{}:\PYGZdq{}}\PYG{p}{,} \PYG{n}{b\PYGZus{}words}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Output: (\PYGZsq{}banana\PYGZsq{},)}
+\end{Verbatim}

@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} INHERITANCE IN PYTHON (Vererbung)}
+\PYG{c+c1}{\PYGZsh{} → Extending a base class (Account) with a derived class (SavingsAccount)}
+
+\PYG{c+c1}{\PYGZsh{} Assuming Account class is already defined as in earlier chapters}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Account}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{number}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name} \PYG{o}{=} \PYG{n}{name}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}number} \PYG{o}{=} \PYG{n}{number}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{deposit}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{+=} \PYG{n}{amount}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{withdraw}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{\PYGZlt{}} \PYG{n}{amount}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Insufficient funds\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{\PYGZhy{}=} \PYG{n}{amount}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{getBalance}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Name: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, Kontonummer: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}number}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{, Guthaben: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} Subclass – Sparkonto mit Zinsen}
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{SavingsAccount}\PYG{p}{(}\PYG{n}{Account}\PYG{p}{):}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{number}\PYG{p}{,} \PYG{n}{balance}\PYG{p}{,} \PYG{n}{interest}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{number}\PYG{p}{)}      \PYG{c+c1}{\PYGZsh{} Call parent constructor}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{n}{balance}\PYG{p}{)}               \PYG{c+c1}{\PYGZsh{} Set starting balance using inherited method}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}interest} \PYG{o}{=} \PYG{n}{interest}          \PYG{c+c1}{\PYGZsh{} Private interest rate for this account}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{add\PYGZus{}interest}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{c+c1}{\PYGZsh{} Compute interest and deposit}
+        \PYG{n}{interest\PYGZus{}amount} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{getBalance}\PYG{p}{()} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}interest}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{n}{interest\PYGZus{}amount}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Creating and using subclass objects}
+
+\PYG{n}{savings\PYGZus{}account} \PYG{o}{=} \PYG{n}{SavingsAccount}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Max Mustermann\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}123456\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mf}{0.05}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{savings\PYGZus{}account}\PYG{o}{.}\PYG{n}{getBalance}\PYG{p}{())}    \PYG{c+c1}{\PYGZsh{} Before interest: 1000}
+
+\PYG{n}{savings\PYGZus{}account}\PYG{o}{.}\PYG{n}{add\PYGZus{}interest}\PYG{p}{()}         \PYG{c+c1}{\PYGZsh{} Add interest}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{savings\PYGZus{}account}\PYG{o}{.}\PYG{n}{getBalance}\PYG{p}{())}    \PYG{c+c1}{\PYGZsh{} After interest: 1050.0}
+\end{Verbatim}

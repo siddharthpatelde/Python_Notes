@@ -15,3 +15,10 @@
 \contentsline {section}{\numberline {15}Lesson 15: Sets – Mathematical Operations}{22}{section.15}%
 \contentsline {section}{\numberline {16}Lesson 16: Dictionary}{24}{section.16}%
 \contentsline {section}{\numberline {17}Lesson 17: Dictionary – Most Important Methods}{25}{section.17}%
+\contentsline {section}{\numberline {18}Lesson 18: Comprehensions – List Comprehensions}{28}{section.18}%
+\contentsline {section}{\numberline {19}Lesson 19: Comprehensions – Tuple Comprehensions}{29}{section.19}%
+\contentsline {section}{\numberline {20}Lesson 20: Comprehensions – Dictionary and Set}{30}{section.20}%
+\contentsline {section}{\numberline {21}Lesson 21: Classes and Objects}{31}{section.21}%
+\contentsline {section}{\numberline {22}Lesson 22: Objects – Using Class Instances}{32}{section.22}%
+\contentsline {section}{\numberline {23}Lesson 23: Private Attributes, Getter and \texttt {\_\_str\_\_} Method}{33}{section.23}%
+\contentsline {section}{\numberline {24}Lesson 24: Inheritance – Extending Classes with \texttt {super()}}{34}{section.24}%

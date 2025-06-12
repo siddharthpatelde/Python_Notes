@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} PRIVATE ATTRIBUTES – GETTERS \PYGZam{} \PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{} EXAMPLE}
+
+\PYG{c+c1}{\PYGZsh{} → A class with private attributes}
+\PYG{c+c1}{\PYGZsh{} → Demonstrates data protection using \PYGZus{}\PYGZus{} (double underscore)}
+\PYG{c+c1}{\PYGZsh{} → Includes a getter method and \PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}() for safe access}
+
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Account}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{number}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name} \PYG{o}{=} \PYG{n}{name}           \PYG{c+c1}{\PYGZsh{} private attribute}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}number} \PYG{o}{=} \PYG{n}{number}       \PYG{c+c1}{\PYGZsh{} private attribute}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{=} \PYG{l+m+mi}{0}           \PYG{c+c1}{\PYGZsh{} private attribute initialized to 0}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{deposit}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{+=} \PYG{n}{amount}     \PYG{c+c1}{\PYGZsh{} internally modifying balance is allowed}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{withdraw}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{amount}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{\PYGZlt{}} \PYG{n}{amount}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Insufficient funds\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance} \PYG{o}{\PYGZhy{}=} \PYG{n}{amount}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{getBalance}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance}        \PYG{c+c1}{\PYGZsh{} getter for balance}
+
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Name: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ Kontonummer: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}number}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ Guthaben: }\PYG{l+s+si}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}balance}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} Object creation and access}
+\PYG{n}{account3} \PYG{o}{=} \PYG{n}{Account}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Simon Frank\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{6543211}\PYG{p}{)}
+\PYG{n}{account3}\PYG{o}{.}\PYG{n}{deposit}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Attempting direct access (NOT RECOMMENDED)}
+\PYG{c+c1}{\PYGZsh{} account3.\PYGZus{}\PYGZus{}balance \PYGZhy{}= 1000000  Illegal access (will not modify balance)}
+
+\PYG{c+c1}{\PYGZsh{} Safe balance access}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{account3}\PYG{o}{.}\PYG{n}{getBalance}\PYG{p}{())}  \PYG{c+c1}{\PYGZsh{}1000}
+
+\PYG{c+c1}{\PYGZsh{} Print uses \PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{} internally}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{account3}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Name: Simon Frank Kontonummer: 6543211 Guthaben: 1000}
+\end{Verbatim}

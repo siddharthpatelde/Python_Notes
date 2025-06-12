@@ -527,7 +527,160 @@
 	\bottomrule
 \end{tabular}
 
+\section{Lesson 18: Comprehensions – List Comprehensions}
+\inputminted{python}{Python_Files/comprehensions_list_guid.py}
 
+\vspace{1em}
+\subsection*{List Comprehension Syntax Breakdown}
+
+\renewcommand{\arraystretch}{1.6}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{3.8cm} p{9.2cm}}
+	\toprule
+	Component & Description \\
+	\midrule
+	
+	\texttt{expression} & The result expression evaluated and added to the list. Can be a variable or formula. \\
+	\texttt{item}       & The looping variable assigned in each iteration. \\
+	\texttt{iterable}   & An iterable like \texttt{range()}, list, tuple, or string. \\
+	\texttt{condition} (optional) & A filter. Only items satisfying this condition are included. \\
+	
+	\bottomrule
+\end{tabular}
+
+
+	\section{Lesson 19: Comprehensions – Tuple Comprehensions}
+	\inputminted{python}{Python_Files/comprehensions_tuple_guid.py}
+	
+	\vspace{1em}
+	\subsection*{Tuple Comprehensions – Syntax Overview}
+	
+	\renewcommand{\arraystretch}{1.6}
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.8cm} p{9.2cm}}
+		\toprule
+		Component & Description \\
+		\midrule
+		
+		\texttt{tuple()} wrapper & Required to convert the generator into a tuple. \\
+		\texttt{(expression for item in iterable)} & Generator-style expression inside \texttt{tuple()}. \\
+		\texttt{expression} & Defines what value to include. \\
+		\texttt{condition} (optional) & Filters the items added to the final tuple. \\
+		
+		\bottomrule
+	\end{tabular}
+	
+	\section{Lesson 20: Comprehensions – Dictionary and Set}
+	\inputminted{python}{Python_Files/comprehensions_dict_set_guid.py}
+	
+	\vspace{1em}
+	\subsection*{Comprehension Syntax Comparison Table}
+	
+	\renewcommand{\arraystretch}{1.6}
+	\rowcolors{2}{gray!10}{white}
+	\begin{tabular}{>{\bfseries}p{3.5cm} p{8.5cm}}
+		\toprule
+		Comprehension Type & Syntax Example \\
+		\midrule
+		
+		List & \texttt{[x for x in iterable if condition]} \\
+		Tuple & \texttt{tuple(x for x in iterable if condition)} \\
+		Dictionary & \texttt{\{k: v for (k, v) in iterable if condition\}} \\
+		Set & \texttt{\{x for x in iterable if condition\}} \\
+		
+		\bottomrule
+	\end{tabular}
+	
+\section{Lesson 21: Classes and Objects}
+\inputminted{python}{Python_Files/class_intro_guid.py}
+
+\vspace{1em}
+\subsection*{Overview – Class Terminology}
+
+\renewcommand{\arraystretch}{1.6}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{3.8cm} p{9.2cm}}
+	\toprule
+	Concept & Explanation \\
+	\midrule
+	
+	\texttt{class} & A blueprint or template for creating objects \\
+	\texttt{object} & An instance of a class with its own data (attributes) \\
+	\texttt{self} & Refers to the current object instance (used inside methods) \\
+	\texttt{\_\_init\_\_()} & The constructor method, automatically called when creating an object \\
+	Attribute & A variable attached to an object (e.g., \texttt{self.name}) \\
+	Method & A function defined inside a class (e.g., \texttt{deposit()}) \\
+	Instance & A specific object created from a class (e.g., \texttt{account1}) \\
+	
+	\bottomrule
+\end{tabular}
+
+	
+\section{Lesson 22: Objects – Using Class Instances}
+\inputminted{python}{Python_Files/object_usage_guid.py}
+
+\vspace{1em}
+\subsection*{Object Usage vs. \texttt{self} in Classes}
+
+\renewcommand{\arraystretch}{1.6}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{5cm} p{8cm}}
+	\toprule
+	Context & Syntax / Explanation \\
+	\midrule
+	
+	Outside the Class & \texttt{account1.balance}, \texttt{account2.deposit(100)} \\
+	Inside the Class & \texttt{self.balance}, \texttt{self.deposit(...)} \\
+	Why? & \texttt{self} refers to the object on which the method was called \\
+	Example & \texttt{account1.withdraw(500)} → \texttt{self = account1} inside the method \\
+	
+	\bottomrule
+\end{tabular}
+
+	
+\section{Lesson 23: Private Attributes, Getter and \texttt{\_\_str\_\_} Method}
+\inputminted{python}{Python_Files/private_attribute_guid.py}
+
+\vspace{1em}
+\subsection*{Private Attributes and Access Methods}
+
+\renewcommand{\arraystretch}{1.4}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{4.5cm} p{8.5cm}}
+	\toprule
+	Access Type & Description \\
+	\midrule
+	\texttt{self.\_\_attribute} & Private attributes within the class. Only accessible inside the class. \\
+	\texttt{obj.getAttribute()} & Getter method for safe external access. \\
+	\texttt{obj.\_\_attribute} & Direct access from outside is not allowed (causes error or unexpected behavior). \\
+	\texttt{print(obj)} & Automatically calls the \texttt{\_\_str\_\_()} method, which returns formatted info. \\
+	\bottomrule
+\end{tabular}
+
+	
+\section{Lesson 24: Inheritance – Extending Classes with \texttt{super()}}
+\inputminted{python}{Python_Files/inheritance_guid.py}
+
+\vspace{1em}
+\subsection*{Inheritance – Overview}
+
+\renewcommand{\arraystretch}{1.4}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{>{\bfseries}p{4.5cm} p{9cm}}
+	\toprule
+	Term & Explanation \\
+	\midrule
+	\texttt{class Subclass(BaseClass):} & Creates a derived class that inherits from the base class. \\
+	\texttt{super().\_\_init\_\_()} & Calls the constructor of the base class. \\
+	\texttt{self.deposit(...)} & Calls a method from the base class. \\
+	\texttt{self.\_\_attribute} & Private attribute of the base class – accessible only via methods. \\
+	\texttt{add\_interest()} & New method of the subclass to calculate and add interest. \\
+	\bottomrule
+\end{tabular}
+
+	
+
+	
 	
 	
 	
