@@ -2,6 +2,20 @@
 
 This repository contains my personal notes on Python, organized and written in LaTeX. It's designed as a structured reference for quickly understanding Python concepts, syntax, and common use cases. Whether you're a beginner or revisiting Python, this document provides summarized explanations with examples.
 
+> 📁 **Repository Map – Where to Find What**
+
+🚩 **Start Here**: The main compiled document is  
+📄 [`document.pdf`](./output/document.pdf) – _This is the core PDF of all Python notes._
+
+📦 **Exercises & Questions**:  
+📁 [`questions/`](./questions/) – Contains all practice problems and topic-wise exercises.  
+📄 [`questions.pdf`](./questions/questions.pdf) – A single PDF with all questions compiled.
+
+🧠 _All `.py` code examples are organized in_ [`Python_Files/`](./Python_Files/) _and referenced from the LaTeX document._
+
+---
+
+
 ## 📘 About the Project
 
 - **Format**: PDF generated from LaTeX
