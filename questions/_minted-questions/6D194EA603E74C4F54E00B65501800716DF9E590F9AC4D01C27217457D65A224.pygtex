@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Q2: Handle ZeroDivisionError and ValueError}
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x = \PYGZdq{}}\PYG{p}{))}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}1/x =\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{x}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ZeroDivisionError}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Division by 0 not allowed\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ValueError}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Please enter a number\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

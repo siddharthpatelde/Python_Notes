@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Q2: Convert contents of automobil.txt to uppercase and write to result.txt}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}automobil.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{,} \PYG{n}{encoding}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{infile}\PYG{p}{:}
+    \PYG{n}{content} \PYG{o}{=} \PYG{n}{infile}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+
+\PYG{n}{uppercase\PYGZus{}content} \PYG{o}{=} \PYG{n}{content}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()}
+
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}result.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{,} \PYG{n}{encoding}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{outfile}\PYG{p}{:}
+    \PYG{n}{outfile}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{uppercase\PYGZus{}content}\PYG{p}{)}
+\end{Verbatim}

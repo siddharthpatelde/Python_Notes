@@ -96,6 +96,7 @@
 	\newpage
 	\tableofcontents
 	\newpage
+
 	
 	\section{If Else – Decision Making in Python}
 	
@@ -200,6 +201,8 @@
 	\subsection*{Q7 – Solution}
 		\inputminted{python}{Files/1/7.py}
 		
+		\newpage
+		
 	\section{Match Statement – Pattern Matching in Python}
 	
 	\subsection*{Q1: Weekday Abbreviation to Full Name}
@@ -257,6 +260,7 @@
 	\subsection*{Q3 – Solution}
 	\inputminted{python}{Files/2/3.py}
 	
+	\newpage
 	
 	\section{The \texttt{for} Loop – Counting, Iteration, and Containers}
 	
@@ -321,7 +325,7 @@
 	
 		
 	
-
+\newpage
 
 \section{Functions – Parameters, Return Values, and Reusability}
 
@@ -399,7 +403,7 @@ Write a recursive function \texttt{total(n)} that returns the sum from 1 to \tex
 \subsection*{Q6 – Solution}
 \inputminted{python}{Files/4/6.py}
 
-
+\newpage
 \section{The \texttt{while} Loop – Manual Iteration and Termination Conditions}
 
 \subsection*{Q1: Rewrite a \texttt{for}-loop as a \texttt{while}-loop (0 to 4)}
@@ -483,7 +487,7 @@ Write a program that allows the user to input multiple integers in a single line
 \subsection*{Q5 – Solution}
 \inputminted{python}{Files/5/5.py}
 
-
+\newpage
 \section{Importing Modules and Libraries – Using Built-in Functionality}
 
 \subsection*{Q1: Simulating Dice Rolls with \texttt{random.randint()}}
@@ -526,7 +530,7 @@ Complete the code so that all \texttt{random} functions are accessible directly,
 
 \subsection*{Q3 – Solution}
 \inputminted{python}{Files/6/3.py}
-
+\newpage
 
 \section{Lists and Tuples – Access, Operations, and Manual Algorithms}
 
@@ -609,7 +613,7 @@ Write a program that sorts the list in ascending order using your own sorting al
 \subsection*{Q5 – Solution}
 \inputminted{python}{Files/7/5.py}
 
-
+\newpage
 	\section{Dictionaries – Key-Value Data Storage and Access}
 	
 	\subsection*{Q1: Loop Through Dictionary Keys and Values}
@@ -684,7 +688,7 @@ Write a program that sorts the list in ascending order using your own sorting al
 	
 \subsection*{Q4 – Solution}
 \inputminted{python}{Files/8/4.py}
-
+\newpage
 \section{Sets – Unique Collections and Set Operations}
 
 \subsection*{Q1: Collect Unique Words Until “Ende”}
@@ -765,7 +769,7 @@ Now compute the difference of the two sets: words that are in the first sentence
 
 \subsection*{Q5 – Solution}
 \inputminted{python}{Files/9/5.py}
-
+\newpage
 \section{Classes and Objects – OOP with Methods, Attributes, and Inheritance}
 
 \subsection*{Q1: Rectangle Class – Area and Perimeter}
@@ -858,7 +862,7 @@ Create a \texttt{Cilinder} with \texttt{r = 1, h = 2} and a \texttt{Quarder} wit
 \subsection*{Q4 – Solution}
 \inputminted{python}{Files/10/4.py}
 
-
+\newpage
 \section{Comprehensions – Lists, Dictionaries, and Sets in One Line}
 
 \subsection*{Q1: List of Squares up to N}
@@ -967,9 +971,110 @@ Use a set comprehension to prompt the user five times for input. Store all uniqu
 \subsection*{Q7 – Solution}
 \inputminted{python}{Files/11/7.py}
 
+\newpage
+\section{File Exercises}
+
+\subsection*{Q1: File Analysis – Count Lines, Words, and Characters}
+Write a program that reads a file named \texttt{automobil.txt}. The program should count the number of lines, the number of words, and the number of characters, and display them.
 
 
-	
+
+\textbf{Example Output:}
+\begin{flushleft}
+	\texttt{Number of lines: \textcolor{blue}{\textit{114}}}\\
+	\texttt{Number of words: \textcolor{blue}{\textit{1735}}}\\
+	\texttt{Number of characters: \textcolor{blue}{\textit{11807}}}
+\end{flushleft}
+
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/12/1.py}
+
+\subsection*{Q2: File Uppercase Conversion}
+Write a program that reads the file \texttt{automobil.txt}, converts its content to uppercase, and writes the result into a new file named \texttt{result.txt}.
+
+\textbf{Example Output:}
+\begin{flushleft}
+	\texttt{Würfe: \textcolor{blue}{\textit{3}}}\\
+	\texttt{\textcolor{blue}{\textit{4}}}\\
+	\texttt{\textcolor{blue}{\textit{4}}}\\
+	\texttt{\textcolor{blue}{\textit{1}}}
+\end{flushleft}
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/12/2.py}
+
+
+\subsection*{Q3: Binary File Comparison}
+Read two binary files \texttt{test1.bin} and \texttt{test2.bin}, compare them byte by byte, and count how many bytes differ. Output the result.
+
+\textbf{Example Output:}
+\begin{flushleft}
+	\texttt{Differences: \textcolor{blue}{\textit{1216}}}
+\end{flushleft}
+
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/12/1.py}
+
+\newpage
+\section{Exceptions}
+
+\subsection*{Q1: Reciprocal Calculation with ZeroDivisionError}
+Prompt the user to enter an integer \texttt{x}. Compute the reciprocal \texttt{1/x} and display the result. If the user enters 0, catch the \texttt{ZeroDivisionError} and print an appropriate message.
+
+\textbf{Example 1:}
+\begin{flushleft}
+	\texttt{x = \textcolor{blue}{\textit{5}}}\\
+	\texttt{1/x = 0.2}
+\end{flushleft}
+
+\textbf{Example 2:}
+\begin{flushleft}
+	\texttt{x = \textcolor{blue}{\textit{0}}}\\
+	\texttt{Division by 0 not allowed}
+\end{flushleft}
+
+\subsection*{Q1 – Solution}
+\inputminted{python}{Files/13/1.py}
+
+\subsection*{Q2: Error Handling for Division and Type}
+Extend the previous program. If the user inputs a word (not an integer), catch a \texttt{ValueError} and print an appropriate message.
+
+\textbf{Example 1:}
+\begin{flushleft}
+	\texttt{x = \textcolor{blue}{\textit{5}}}\\
+	\texttt{1/x = 0.2}
+\end{flushleft}
+
+\textbf{Example 2:}
+\begin{flushleft}
+	\texttt{x = \textcolor{blue}{\textit{0}}}\\
+	\texttt{Division by 0 not allowed}
+\end{flushleft}
+
+\textbf{Example 3:}
+\begin{flushleft}
+	\texttt{x = \textcolor{blue}{\textit{hello}}}\\
+	\texttt{Please enter a number}
+\end{flushleft}
+
+
+\subsection*{Q2 – Solution}
+\inputminted{python}{Files/13/2.py}
+
+
+\subsection*{Q3: Raising a ValueError for Negative Input}
+Raise a \texttt{ValueError} when the user enters a negative number. All exceptions (\texttt{ZeroDivisionError}, \texttt{ValueError}) should be handled with a single \texttt{except} block.
+
+\textbf{Example:}
+\begin{flushleft}
+	\texttt{x = \textcolor{blue}{\textit{-1}}}\\
+	\texttt{Negative numbers not allowed}
+\end{flushleft}
+
+\subsection*{Q3 – Solution}
+\inputminted{python}{Files/13/3.py}
 	
 \end{document}
 
