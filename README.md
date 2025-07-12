@@ -5,11 +5,11 @@ This repository contains my personal notes on Python, organized and written in L
 > 📁 **Repository Map – Where to Find What**
 
 🚩 **Start Here**: The main compiled document is  
-📄 [`document.pdf`](./output/document.pdf) – _This is the core PDF of all Python notes._
+📄 [`document.pdf`](https://github.com/siddharthpatelde/Python_Notes/blob/main/document.pdf) – _This is the core PDF of all Python notes._
 
 📦 **Exercises & Questions**:  
-📁 [`questions/`](./questions/) – Contains all practice problems and topic-wise exercises.  
-📄 [`questions.pdf`](./questions/questions.pdf) – A single PDF with all questions compiled.
+📁 [`questions/`](https://github.com/siddharthpatelde/Python_Notes/tree/main/questions) – Contains all practice problems and topic-wise exercises.  
+📄 [`questions.pdf`](https://github.com/siddharthpatelde/Python_Notes/blob/main/questions/questions.pdf) – A single PDF with all questions compiled.
 
 🧠 _All `.py` code examples are organized in_ [`Python_Files/`](./Python_Files/) _and referenced from the LaTeX document._
 
@@ -21,12 +21,6 @@ This repository contains my personal notes on Python, organized and written in L
 - **Format**: PDF generated from LaTeX
 - **Content**: Core Python topics with examples, syntax highlights, and summary tables
 - **Purpose**: For learning, revision, and teaching purposes
-
-## 📂 Structure
-
-- `Python_Files/`: Contains example `.py` files referenced in the notes
-- `latex/`: LaTeX source files for the Python guide
-- `output/`: Compiled PDF files
 
 ## ✅ Features
 
